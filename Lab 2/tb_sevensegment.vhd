@@ -85,6 +85,9 @@ BEGIN
       data <= '1000'; -- 8
       wait for 100 ns;
       data <= '1001'; -- 9
+      wait for 100 ns;
+      data <= '1111'; -- invalid
+      wait for 100 ns;
 
       wait;
    end process;
