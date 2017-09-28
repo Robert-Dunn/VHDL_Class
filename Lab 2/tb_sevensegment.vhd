@@ -1,17 +1,17 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
- 
+
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
- 
+
 ENTITY tb_sevensegment IS
 END tb_sevensegment;
- 
-ARCHITECTURE behavior OF tb_sevensegment IS 
- 
+
+ARCHITECTURE behavior OF tb_sevensegment IS
+
     -- Component Declaration for the Unit Under Test (UUT)
- 
+
     COMPONENT sevensegment
     PORT(
          CA : OUT  std_logic;
@@ -25,7 +25,7 @@ ARCHITECTURE behavior OF tb_sevensegment IS
          dp_in : IN  std_logic;
          data : IN  std_logic_vector(3 downto 0)
         );
-    END COMPONENT;   
+    END COMPONENT;
 
    --Inputs
    signal dp_in : std_logic := '0';
@@ -40,9 +40,9 @@ ARCHITECTURE behavior OF tb_sevensegment IS
    signal CF : std_logic;
    signal CG : std_logic;
    signal DP : std_logic;
- 
+
 BEGIN
- 
+
 	-- Instantiate the Unit Under Test (UUT)
    uut: sevensegment PORT MAP (
           CA => CA,
@@ -60,8 +60,31 @@ BEGIN
 
    -- Stimulus process
    stim_proc: process
-   begin		
+   begin
 		  wait for 100 ns;
+      dp_in <= '1'; -- test if decimal tuns off
+      wait for 100 ns;
+      dp_in <= '0'; -- turn demcimal off again
+      wait for 100 ns;
+      data <= '0000'; -- test zero
+      wait for 100 ns;
+      data <= '0001'; -- 1
+      wait for 100 ns;
+      data <= '0010'; -- 2
+      wait for 100 ns;
+      data <= '0011'; -- 3
+      wait for 100 ns;
+      data <= '0100'; -- 4
+      wait for 100 ns;
+      data <= '0101'; -- 5
+      wait for 100 ns;
+      data <= '0110' -- 6
+      wait for 100 ns;
+      data <= '0111'; -- 7
+      wait for 100 ns;
+      data <= '1000'; -- 8
+      wait for 100 ns;
+      data <= '1001'; -- 9
 
       wait;
    end process;
