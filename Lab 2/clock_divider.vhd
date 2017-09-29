@@ -5,11 +5,11 @@ entity clock_divider is
     Port ( clk : in  STD_LOGIC;
            reset : in  STD_LOGIC;
            enable: in STD_LOGIC;
-			     kHz: out STD_LOGIC
+			     kHz: out STD_LOGIC;
 			singleSecPort: out STD_LOGIC_VECTOR(3 downto 0);
 			tenSecPort: out STD_LOGIC_VECTOR(2 downto 0);
 			minutePort: out STD_LOGIC_VECTOR(3 downto 0);
-			tenMinutePort: out STD_LOGIC_VECTOR(2 downto 0);	
+			tenMinutePort: out STD_LOGIC_VECTOR(2 downto 0)	
 		   -- Add output buses (STD_LOGIC_VECTOR(x downto y))
 		   -- here to hold values of single seconds, tens of seconds,
 		   -- minutes, and tens of minutes. Consult Lab 1 intructions
@@ -25,8 +25,6 @@ signal 	hundredhertz: STD_LOGIC;
 signal	tenhertz: STD_LOGIC;
 signal  onehertz: STD_LOGIC;
 signal  onetenthhertz: STD_LOGIC;
-
-signal onehertz: STD_LOGIC;
 signal tensec: STD_LOGIC;
 signal onemin: STD_LOGIC;
 signal tenmin: STD_LOGIC;
@@ -52,8 +50,8 @@ end component;
 begin
 kiloHzClock: downcounter
 generic map(
-				period => (100000-1), -- "1 1000 0110 1010 0000" in binary
-				WIDTH => 17
+				period => (10-1), -- "1 1000 0110 1010 0000" in binary
+				WIDTH => 4
 			)
 port map (
 				clk => clk,
@@ -133,7 +131,7 @@ port map(
 				clk => clk,
 				reset => reset,
 				enable => onemin,
-				zero => tenmin;
+				zero => tenmin,
 				value => minuteValue
 );
 tensMinuteClock: downcounter
@@ -146,7 +144,7 @@ port map(
 				reset => reset,
 				enable => tenmin,
 				zero => open,
-				value => tenMinuteValue;
+				value => tenMinuteValue
 );
 
 
