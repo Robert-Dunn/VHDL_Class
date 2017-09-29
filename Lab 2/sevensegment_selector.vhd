@@ -20,14 +20,17 @@ begin
         -- Fill in the reset state values for q
     elsif (rising_edge(clk)) then
         if (switch = '1') then
-           d(0)<=q(3);
            q(0)<=d(0);
-           d(1)<=q(0);
            q(1)<=d(1);
-           d(2)<=q(1);
            q(2)<=d(2);
-           d(3)<=q(2);
            q(3)<=d(3);
+--           q(0)<=d(0);
+--           d(1)<=q(0);
+--           q(1)<=d(1);
+--           d(2)<=q(1);
+--           q(2)<=d(2);
+--           d(3)<=q(2);
+--           q(3)<=d(3);
 
             -- Propagate signals through the DFF
             -- From input to output
@@ -38,6 +41,10 @@ end process;
 
 -- Connect the DFFs into a chain/loop
 -- This means output of one needs to connect to input of the next one
+d(0)<=q(3);
+d(1)<=q(0);
+d(2)<=q(1);
+d(3)<=q(2);
 
 -- Copying q to the output of the block
 output(0) <= q(0);

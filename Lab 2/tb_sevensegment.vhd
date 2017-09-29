@@ -66,27 +66,27 @@ BEGIN
       wait for 100 ns;
       dp_in <= '0'; -- turn demcimal off again
       wait for 100 ns;
-      data <= '0000'; -- test zero
+      data <= "0000"; -- test zero
       wait for 100 ns;
-      data <= '0001'; -- 1
+      data <= "0001"; -- 1
       wait for 100 ns;
-      data <= '0010'; -- 2
+      data <= "0010"; -- 2
       wait for 100 ns;
-      data <= '0011'; -- 3
+      data <= "0011"; -- 3
       wait for 100 ns;
-      data <= '0100'; -- 4
+      data <= "0100"; -- 4
       wait for 100 ns;
-      data <= '0101'; -- 5
+      data <= "0101"; -- 5
       wait for 100 ns;
-      data <= '0110' -- 6
+      data <= "0110"; -- 6
       wait for 100 ns;
-      data <= '0111'; -- 7
+      data <= "0111"; -- 7
       wait for 100 ns;
-      data <= '1000'; -- 8
+      data <= "1000"; -- 8
       wait for 100 ns;
-      data <= '1001'; -- 9
+      data <= "1001"; -- 9
       wait for 100 ns;
-      data <= '1111'; -- invalid
+      data <= "1111"; -- invalid
       wait for 100 ns;
 
       wait;

@@ -50,8 +50,8 @@ end component;
 begin
 kiloHzClock: downcounter
 generic map(
-				period => (10-1), -- "1 1000 0110 1010 0000" in binary
-				WIDTH => 4
+				period => (100000-1), -- "1 1000 0110 1010 0000" in binary
+				WIDTH => 17
 			)
 port map (
 				clk => clk,

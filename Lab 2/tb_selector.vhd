@@ -50,10 +50,10 @@ BEGIN
 
     switch_process: process
     begin
+        switch <= '0';
+        wait for clk_period*10;
         switch <= '1';
         wait for clk_period;
-        switch <= '0';
-        wait for 1 ms;
         -- Write the contents of this process
         -- switch needs to pulse, but slower than clk
     end process;
