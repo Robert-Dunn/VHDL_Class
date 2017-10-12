@@ -28,11 +28,12 @@ begin
             -- Enter reset state of your FSM here (this only affects Q, not D).
             -- ADDED:
             q <= "00000001";
-		elsif (rising_edge(pixel_clk)) then
+		elsif (rising_edge(clk)) then
+    if(pixel_clk = '1') then
 			if (next_pixel = '1') then
 				if (count_pixels < 79) then -- This value determines the stripe width
 					count_pixels <= count_pixels + 1;
-				else 
+				else
 					count_pixels <= 0;
 					-- We need to transition to the next state.
 					-- So all the DFFs need to propogate their input to their output
@@ -40,6 +41,7 @@ begin
 					q <= d;
 				end if;
 			end if;
+    end if;
 		end if;
 	end process PixelCount;
 
@@ -54,8 +56,8 @@ begin
     d(5) <= (q(4) and (not mode)) or (q(6) and mode);
     d(6) <= (q(5) and (not mode)) or (q(4) and mode);
     d(7) <= (q(6) and (not mode)) or (q(5) and mode);
-	
-	
+
+
 	-- Convert states to a color
 	StatesDecode: process(q) begin
 		case q is
@@ -90,4 +92,3 @@ begin
 
 
 end Behavioral;
-
