@@ -13,7 +13,7 @@ entity debouncer is
 end debouncer;
 
 architecture behavioral of debouncer is
-signal scounter: natural range 0 to tenTimes-1;
+signal synch_counter: natural range 0 to tenTimes-1;
 signal asynch: std_logic_vector(1 downto 0);
 
 begin
@@ -22,7 +22,7 @@ begin
 	if(rising_edge(clk)) then
 	    asynch <= asynch(0) & asynch_in;
 			if((asynch(0) and asynch(1)) = '1') then
-	        if(scounter = tenTimes-1) then
+	        if(synch_counter = tenTimes-1) then
 	            synch_debounced <= '1';
 	            synch_counter <= 0;
 	        else

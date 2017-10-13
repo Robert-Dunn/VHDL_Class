@@ -1,0 +1,363 @@
+/*
+
+Vivado v2017.2 (64-bit)
+SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+
+Process ID: 10748
+License: Customer
+
+Current time: 	10/13/17 8:06:27 AM MDT
+Time zone: 	Mountain Standard Time (America/Denver)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1440x960
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 59 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.2/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.2/tps/win64/jre/bin/java.exe
+Java library paths: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o;C:/WINDOWS/Sun/Java/bin;C:/WINDOWS/system32;C:/WINDOWS;C:/Xilinx/Vivado/2017.2/bin;C:/Xilinx/Vivado/2017.2/lib/win64.o;C:/Xilinx/Vivado/2017.2/tps/win64/jre/bin/server;C:/Xilinx/Vivado/2017.2/tps/win64/jre/bin;C:/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/nt64;C:/Xilinx/Vivado_HLS/2017.2/bin;C:/WINDOWS/system32;C:/WINDOWS;C:/WINDOWS/System32/Wbem;C:/WINDOWS/System32/WindowsPowerShell/v1.0/;C:/Program Files/Git/cmd;C:/Users/Rob Dunn/AppData/Local/Microsoft/WindowsApps;C:/Users/Rob Dunn/AppData/Local/atom/bin;C:/Xilinx/Vivado/2017.2/tps/mingw/6.2.0/win64.o/nt/bin;C:/Xilinx/Vivado/2017.2/tps/mingw/6.2.0/win64.o/nt/libexec/gcc/x86_64-w64-mingw32/6.2.0;.
+
+User name: 	Rob Dunn
+User home directory: C:/Users/Rob Dunn
+User working directory: C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn
+User country: 	CA
+User language: 	en
+User locale: 	en_CA
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.2
+RDI_DATADIR: C:/Xilinx/Vivado/2017.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.2/bin
+
+User preferences location: C:/Users/Rob Dunn/AppData/Roaming/Xilinx/Vivado
+Vivado preferences directory: C:/Users/Rob Dunn/AppData/Roaming/Xilinx/Vivado/2017.2/vivado.xml
+Vivado layouts directory: C:/Users/Rob Dunn/AppData/Roaming/Xilinx/Vivado/2017.2/layouts
+PlanAhead jar location: 	C:/Xilinx/Vivado/2017.2/lib/classes/planAhead.jar
+Vivado Look & Feel: 	[Synthetica - the extended Synth Look and Feel. - ui.g.i.H]
+Engine tmp dir: 	C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/.Xil/Vivado-10748-DESKTOP-OAHKD4V
+
+GUI allocated memory:	143 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 481 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 51 MB (+50760kb) [00:00:10]
+// [Engine Memory]: 448 MB (+317770kb) [00:00:10]
+// bs:g (cg:JFrame):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Rob Dunn\Documents\School\ENEL 453\VHDL_Class\Lab3\Lab3_Oh_Giesbrecht_Dunn\Lab3_Oh_Giesbrecht_Dunn.xpr. Version: Vivado v2017.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn' INFO: [Project 1-313] Project file moved from 'C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 553 MB (+87255kb) [00:00:14]
+// [GUI Memory]: 68 MB (+15166kb) [00:00:15]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 572 MB. GUI used memory: 38 MB. Current time: 10/13/17 8:06:32 AM MDT
+// Project name: Lab3_Oh_Giesbrecht_Dunn; location: C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn; part: xc7a35tcpg236-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 762.902 ; gain = 106.035 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+dismissDialog("Open Project"); // bs:g (cg:JFrame)
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 26 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, vga_module(Behavioral) (vga_module.vhd)]", 1); // B:i (D:JPanel, cg:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, vga_module(Behavioral) (vga_module.vhd)]", 1); // B:i (D:JPanel, cg:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3); // B:i (D:JPanel, cg:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 4); // B:i (D:JPanel, cg:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 4); // B:i (D:JPanel, cg:JFrame)
+// Elapsed time: 16 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 4); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // B:i (D:JPanel, cg:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z:JMenu (ai:JPopupMenu, cg:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z:JMenu (ai:JPopupMenu, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ac:JMenuItem (ai:JPopupMenu, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c:g (cg:JFrame): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_HDL_NETLIST_BLOCK_DESIGN, "Add or create design sources"); // a:JRadioButton (JPanel:JComponent, c:g)
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, c:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // B:JideButton (f:CommandBar, c:g)
+selectMenuItem(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files..."); // ac:JMenuItem (ai:JPopupMenu, c:g)
+setFileChooser("C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd");
+// HMemoryUtils.trashcanNow. Engine heap size: 602 MB. GUI used memory: 42 MB. Current time: 10/13/17 8:07:45 AM MDT
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, c:g)
+// 'h' command handler elapsed time: 13 seconds
+// [Engine Memory]: 602 MB (+21867kb) [00:01:30]
+dismissDialog("Add Sources"); // c:g (cg:JFrame)
+// Tcl Message: add_files -norecurse {{C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd}} 
+// Elapsed time: 23 seconds
+selectButton(RDIResource.AbstractSearchablePanel_SHOW_SEARCH, "Sources_search"); // u:JideToggleButton (f:CommandBar, cg:JFrame): TRUE
+// Elapsed time: 10 seconds
+setText("PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE_SEARCH_FIELD", (String) null); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, cg:JFrame)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B:JideButton (f:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c:g (cg:JFrame): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_SIMULATION_SPECIFIC_HDL_FILES, "Add or create simulation sources"); // a:JRadioButton (JPanel:JComponent, c:g)
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, c:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // B:JideButton (f:CommandBar, c:g)
+selectMenuItem(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files..."); // ac:JMenuItem (ai:JPopupMenu, c:g)
+setFileChooser("C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_clock_divider.vhd");
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, c:g)
+// 'h' command handler elapsed time: 11 seconds
+dismissDialog("Add Sources"); // c:g (cg:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset sim_1 -norecurse {{C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_clock_divider.vhd}} 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, vga_module(Behavioral) (vga_module.vhd)]", 1); // B:i (D:JPanel, cg:JFrame)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+// [GUI Memory]: 73 MB (+2236kb) [00:02:22]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 80 MB (+3503kb) [00:02:24]
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_bouncing_box(behavior) (tb_bouncing_box.vhd)]", 9); // B:i (D:JPanel, cg:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_sync_signal_generator(behaviour) (tb_sync_signal_generator.vhd)]", 11); // B:i (D:JPanel, cg:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_up_down_counter(behavior) (tb_up_down_counter.vhd)]", 12); // B:i (D:JPanel, cg:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_vga_module(behavior) (tb_vga_module.vhd)]", 13); // B:i (D:JPanel, cg:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_debouncer(behavioral) (tb_debouncer.vhd)]", 6); // B:i (D:JPanel, cg:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_debouncer(behavioral) (tb_debouncer.vhd)]", 6); // B:i (D:JPanel, cg:JFrame)
+// PAPropertyPanels.initPanels (debouncer.vhd) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_debouncer(behavioral) (tb_debouncer.vhd), uut : debouncer(behavioral) (debouncer.vhd)]", 7, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_debouncer(behavioral) (tb_debouncer.vhd), uut : debouncer(behavioral) (debouncer.vhd)]", 7, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 5, true, false, false, false, true, false); // B:i (D:JPanel, cg:JFrame) - Popup Trigger - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 5); // B:i (D:JPanel, cg:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 5); // B:i (D:JPanel, cg:JFrame)
+// [GUI Memory]: 86 MB (+1470kb) [00:03:14]
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u:M (JViewport:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ac:JMenuItem (ai:JPopupMenu, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e:bs (cg:JFrame):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'tb_debouncer' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-99] Step results log file:'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xvhdl.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xvhdl.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 3 seconds
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+// a:a (cg:JFrame): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f:a (JPanel:JComponent, a:a)
+dismissDialog("Critical Messages"); // a:a (cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 91 MB (+438kb) [00:03:56]
+// PAPropertyPanels.initPanels (sim_1) elapsed time: 0.2s
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 36 seconds
+selectCodeEditor("debouncer.vhd", 216, 145); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("debouncer.vhd", 58, 65); // bI:J (JPanel:JComponent, cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 10 seconds
+selectCodeEditor("debouncer.vhd", 121, 214); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("debouncer.vhd", 111, 216); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("debouncer.vhd", 168, 339); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u:M (JViewport:JComponent, cg:JFrame)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator]", 1); // u:M (JViewport:JComponent, cg:JFrame)
+// [Engine Memory]: 653 MB (+22652kb) [00:04:36]
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ac:JMenuItem (ai:JPopupMenu, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e:bs (cg:JFrame):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'tb_debouncer' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-99] Step results log file:'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xvhdl.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xvhdl.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+// a:a (cg:JFrame): Critical Messages: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 670 MB. GUI used memory: 45 MB. Current time: 10/13/17 8:10:55 AM MDT
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f:a (JPanel:JComponent, a:a)
+dismissDialog("Critical Messages"); // a:a (cg:JFrame)
+selectCodeEditor("debouncer.vhd", 355, 189); // bI:J (JPanel:JComponent, cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u:M (JViewport:JComponent, cg:JFrame)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0); // u:M (JViewport:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ac:JMenuItem (ai:JPopupMenu, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e:bs (cg:JFrame):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'tb_debouncer' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: "xvhdl -m64 --relax -prj tb_debouncer_vhdl.prj" INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd" into library xil_defaultlib INFO: [VRFC 10-307] analyzing entity debouncer INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_debouncer.vhd" into library xil_defaultlib INFO: [VRFC 10-307] analyzing entity tb_debouncer 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Vivado Simulator 2017.2 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 00e315f3c04e4c0e933e8595547c4992 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_debouncer_behav xil_defaultlib.tb_debouncer -log elaborate.log  Using 2 slave threads. Starting static elaboration ERROR: [VRFC 10-380] binding entity debouncer does not have generic mtimes [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_debouncer.vhd:40] ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit tb_debouncer in library work failed. 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds INFO: [USF-XSim-99] Step results log file:'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 5 seconds
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+// a:a (cg:JFrame): Critical Messages: addNotify
+// Elapsed time: 12 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f:a (JPanel:JComponent, a:a)
+dismissDialog("Critical Messages"); // a:a (cg:JFrame)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aF:FrameContainer (ContainerContainer:JideSplitPane, cg:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'. ]", 22, false, false, false, true, false, false); // ah:i (JViewport:JComponent, cg:JFrame) - Alt Key
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Simulation, sim_1]", 38); // ah:i (JViewport:JComponent, cg:JFrame)
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_debouncer(behavioral) (tb_debouncer.vhd)]", 6, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_debouncer(behavioral) (tb_debouncer.vhd)]", 6, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+selectCodeEditor("tb_debouncer.vhd", 94, 214); // bI:J (JPanel:JComponent, cg:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "debouncer.vhd", 1); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_debouncer.vhd", 2); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+// [GUI Memory]: 97 MB (+2431kb) [00:06:01]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 37 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u:M (JViewport:JComponent, cg:JFrame)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 6); // u:M (JViewport:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ac:JMenuItem (ai:JPopupMenu, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e:bs (cg:JFrame):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'tb_debouncer' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-99] Step results log file:'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xvhdl.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xvhdl.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+// a:a (cg:JFrame): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f:a (JPanel:JComponent, a:a)
+dismissDialog("Critical Messages"); // a:a (cg:JFrame)
+// Elapsed time: 19 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Simulation, sim_1, [XSIM 43-3321] Static elaboration of top level VHDL design unit tb_debouncer in library work failed.. ]", 39, false); // ah:i (JViewport:JComponent, cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 45 seconds
+selectCodeEditor("tb_debouncer.vhd", 366, 81); // bI:J (JPanel:JComponent, cg:JFrame)
+// TclEventType: DG_GRAPH_GENERATED
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // A:b
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_debouncer(behavioral) (tb_debouncer.vhd)]", 6, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_debouncer(behavioral) (tb_debouncer.vhd)]", 6, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u:M (JViewport:JComponent, cg:JFrame)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator]", 1); // u:M (JViewport:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ac:JMenuItem (ai:JPopupMenu, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e:bs (cg:JFrame):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'tb_debouncer' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: "xvhdl -m64 --relax -prj tb_debouncer_vhdl.prj" INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd" into library xil_defaultlib INFO: [VRFC 10-307] analyzing entity debouncer INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_debouncer.vhd" into library xil_defaultlib INFO: [VRFC 10-307] analyzing entity tb_debouncer 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav' 
+// Tcl Message: Vivado Simulator 2017.2 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 00e315f3c04e4c0e933e8595547c4992 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_debouncer_behav xil_defaultlib.tb_debouncer -log elaborate.log  Using 2 slave threads. Starting static elaboration 
+// Tcl Message: Completed static elaboration Starting simulation data flow analysis Completed simulation data flow analysis Time Resolution for simulation is 1ps Compiling package std.standard Compiling package std.textio Compiling package ieee.std_logic_1164 Compiling package ieee.std_logic_arith Compiling package ieee.std_logic_unsigned Compiling architecture behavioral of entity xil_defaultlib.debouncer [debouncer_default] Compiling architecture behavioral of entity xil_defaultlib.tb_debouncer 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Built simulation snapshot tb_debouncer_behav  ****** Webtalk v2017.2 (64-bit)   **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017   **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.  source C:/Users/Rob -notrace couldn't read file "C:/Users/Rob": no such file or directory INFO: [Common 17-206] Exiting Webtalk at Fri Oct 13 08:14:29 2017... 
+// Tcl Message: run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 862.734 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tb_debouncer_behav -key {Behavioral:sim_1:Functional:tb_debouncer} -tclbatch {tb_debouncer.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2017.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: source tb_debouncer.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// HMemoryUtils.trashcanNow. Engine heap size: 670 MB. GUI used memory: 52 MB. Current time: 10/13/17 8:14:32 AM MDT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_debouncer_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 862.734 ; gain = 0.000 
+// 'd' command handler elapsed time: 9 seconds
+dismissDialog("Run Simulation"); // e:bs (cg:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // M:a (Workspace:JPanel, cg:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 670 MB. GUI used memory: 51 MB. Current time: 10/13/17 8:14:35 AM MDT
+// Waveform: addNotify
+// Waveform: addNotify
+// Waveform: addNotify
+floatView(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 1"); // ax:DockableFrame (aF:FrameContainer, cg:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// RDIResource.RDIViews_WAVEFORM_VIEWER: Untitled 1: float view
+// Waveform: addNotify
+// Waveform: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 670 MB. GUI used memory: 53 MB. Current time: 10/13/17 8:14:40 AM MDT
+dockFrame(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 1"); // ax:DockableFrame (aF:FrameContainer, FrameFloatingContainer:ResizableFrame)
+// RDIResource.RDIViews_WAVEFORM_VIEWER: Untitled 1: dock view
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // B:JideButton (f:CommandBar, cg:JFrame)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "debouncer.vhd", 0); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Untitled 1", 2); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)

@@ -37,17 +37,17 @@ end tb_debouncer;
 
 architecture behavioral of tb_debouncer is
 component debouncer is
-    generic(mtimes: natural := 10);
+    generic(tenTimes: natural := 10);
     port ( clk : in STD_LOGIC;
            asynch_in : in STD_LOGIC;
            synch_debounced : out STD_LOGIC);
 end component;
-constant mtimes: natural := 10;
+constant tenTimes: natural := 10;
 constant clk_period: time:= 10 ns;
 signal sx, sclk, sy: std_logic;
 begin
 uut: debouncer
-    generic map(mtimes => mtimes)
+    generic map(tenTimes => tenTimes)
     port map ( clk => sclk,
                asynch_in => sx,
                synch_debounced => sy);

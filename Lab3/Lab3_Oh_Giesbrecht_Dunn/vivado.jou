@@ -2,25 +2,23 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Fri Oct 13 01:46:11 2017
-# Process ID: 9024
-# Current directory: C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4292 C:\Users\donald.dunn\Documents\School\ENEL 453\VHDL_Class\Lab3\Lab3_Oh_Giesbrecht_Dunn\Lab3_Oh_Giesbrecht_Dunn.xpr
-# Log file: C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/vivado.log
-# Journal file: C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn\vivado.jou
+# Start of session at: Fri Oct 13 08:05:58 2017
+# Process ID: 10748
+# Current directory: C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8260 C:\Users\Rob Dunn\Documents\School\ENEL 453\VHDL_Class\Lab3\Lab3_Oh_Giesbrecht_Dunn\Lab3_Oh_Giesbrecht_Dunn.xpr
+# Log file: C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/vivado.log
+# Journal file: C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.xpr}
+open_project {C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.xpr}
 update_compile_order -fileset sources_1
-open_run synth_1 -name synth_1
-add_files -norecurse {{C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd}}
-add_files -norecurse {{C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd}}
-update_compile_order -fileset sources_1
+add_files -norecurse {{C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd}}
 set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse {{C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_sync_signal_generator.vhd} {C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_bouncing_box.vhd} {C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_vga_module.vhd} {C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_up_down_counter.vhd}}
+add_files -fileset sim_1 -norecurse {{C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_clock_divider.vhd}}
 update_compile_order -fileset sim_1
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse {{C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_vga_stripes_dff2.vhd} {C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_vga_stripes_dff.vhd}}
-update_compile_order -fileset sim_1
-add_files -norecurse {{C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/up_down_counter.vhd}}
-update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source tb_debouncer.tcl

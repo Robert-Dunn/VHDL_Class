@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity debouncer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_debouncer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_debouncer
