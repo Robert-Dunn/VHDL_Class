@@ -1,6 +1,6 @@
 @echo off
 set xv_path=C:\\Xilinx\\Vivado\\2017.2\\bin
-call %xv_path%/xsim tb_vga_module_behav -key {Behavioral:sim_1:Functional:tb_vga_module} -tclbatch tb_vga_module.tcl -log simulate.log
+call %xv_path%/xsim tb_bouncing_box_behav -key {Behavioral:sim_1:Functional:tb_bouncing_box} -tclbatch tb_bouncing_box.tcl -log simulate.log
 if "%errorlevel%"=="0" goto SUCCESS
 if "%errorlevel%"=="1" goto END
 :END

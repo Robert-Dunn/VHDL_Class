@@ -41,7 +41,7 @@ signal S6 : std_logic_vector (9 downto 0);
 signal S7 : std_logic_vector (9 downto 0);
 signal S8 : std_logic_vector (9 downto 0);
 
- 
+
 constant C1 : std_logic_vector (9 downto 0):= "0000000001";
 constant C2 : std_logic_vector (9 downto 0):= "0000000010";
 constant C3 : std_logic_vector (9 downto 0):= "0000000011";
@@ -97,9 +97,9 @@ S8 <= M8 (9 downto 0);
   box2_loc_y <= box_loc_y;
   box3_loc_x <= box2_loc_x + S4 + gap;
   box3_loc_y <= box_loc_y;
-  initals_xmax <= "1010000000"- ((box3_loc_x + S4) - box_loc_x)  
-  initals_ymax <= "0111100000" - ((box3_loc_y + S4) - box_loc_y)
-  
+  initals_xmax <= "1010000000"- ((box3_loc_x + S4) - box_loc_x);
+  initals_ymax <= "0111100000" - ((box3_loc_y + S4) - box_loc_y);
+
 MoveLetters: process(clk, reset)
 begin
     if (reset ='1') then
@@ -148,9 +148,9 @@ begin
         end if;
 	end if;
 end process MoveLetters;
-  
-  
-  
+
+
+
 MoveBox: process(clk, reset)
 begin
     if (reset ='1') then
@@ -294,7 +294,7 @@ red   <= pixel_color(11 downto 8);
 green <= pixel_color(7 downto 4);
 blue  <= pixel_color(3 downto 0);
 
-box_loc_x_max <= "1010000000" - box_width - 1;  
+box_loc_x_max <= "1010000000" - box_width - 1;
 -- Describe the value for box_loc_y_max here:
 -- Hint: In binary, 640 is 1010000000 and 480 is 0111100000
 -- ADDED

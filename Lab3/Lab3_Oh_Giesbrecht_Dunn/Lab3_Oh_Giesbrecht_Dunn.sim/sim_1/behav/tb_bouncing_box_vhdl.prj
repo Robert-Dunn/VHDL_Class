@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../../bouncing_box.vhd"
+vhdl xil_defaultlib  "../../../../tb_bouncing_box.vhd"
+
+# Do not sort compile order
+nosort
