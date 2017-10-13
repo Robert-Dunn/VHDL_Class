@@ -15,12 +15,13 @@ architecture behavior of tb_bouncing_box is
            box_color: in STD_LOGIC_VECTOR(11 downto 0);
            box_width: in STD_LOGIC_VECTOR(8 downto 0);
            kHz: in STD_LOGIC;
+           switch_type: IN STD_LOGIC;
            red: out STD_LOGIC_VECTOR(3 downto 0);
            blue: out STD_LOGIC_VECTOR(3 downto 0);
            green: out STD_LOGIC_VECTOR(3 downto 0)
          );
     END COMPONENT;
-    
+
     --Inputs
     signal clk : std_logic;
     signal reset : std_logic;
@@ -29,6 +30,8 @@ architecture behavior of tb_bouncing_box is
     signal box_color: std_logic_vector(11 downto 0) := "111100001111"; -- don't need to change the color
     signal box_width: std_logic_vector(8 downto 0);
     signal kHz: std_logic;
+    signal switch_type: std_logic;
+
 
 	--Outputs
     signal red:   std_logic_vector(3 downto 0);
@@ -37,9 +40,9 @@ architecture behavior of tb_bouncing_box is
 
    -- Clock period definitions
    constant clk_period : time := 10 ns;
- 
+
 BEGIN
- 
+
 	-- Instantiate the Unit Under Test (UUT)
    uut: bouncing_box PORT MAP (
           clk => clk,
@@ -49,9 +52,10 @@ BEGIN
           box_color => box_color,
           box_width => box_width,
           kHz => kHz,
+          switch_type => switch_type,
           red => red,
           blue => blue,
-          green => green                           
+          green => green
         );
 
    -- Clock process want kHz to be the same frequency for the test
@@ -61,8 +65,8 @@ BEGIN
 		wait for clk_period/2;
 		clk <= '0';
 		wait for clk_period/2;
-   end process; 
-   
+   end process;
+
    -- kHz process
    KHzProcess: process
    begin
@@ -71,19 +75,19 @@ BEGIN
         kHz <= '0';
         wait for clk_period * 10;
     end process;
-        
+
    -- Reset process
    ResetProcess: process
-   begin		
+   begin
       -- hold reset state for 100 ns.
 		reset <= '0';
-      wait for 10 ns;	
+      wait for 10 ns;
 		reset <= '1';
       wait for 100 ns;
 		reset <= '0';
       wait;
    end process;
-   
+
    -- Box width process
     BoxWidth: process
     begin
@@ -100,5 +104,15 @@ BEGIN
         box_width <= "100001000";
         wait for 100 ns;
     end process;
-    
+
+    -- switch_type process
+    SwitchType: process
+    begin
+       -- hold reset state for 100 ns.
+ 		switch_type <= '0';
+       wait for 600 ns;
+ 		switch_type <= '1';
+       wait for 600 ns;
+    end process;
+
 END;
