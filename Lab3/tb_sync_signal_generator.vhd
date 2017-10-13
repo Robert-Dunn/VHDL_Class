@@ -41,6 +41,7 @@ BEGIN
 	-- Instantiate the Unit Under Test (UUT)
    uut: sync_signals_generator PORT MAP (
           pixel_clk => pixel_clk,
+          clk => clk,
           reset => reset,
           hor_sync => hor_sync,
           ver_sync => ver_sync,

@@ -1,8 +1,4 @@
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity sync_signals_generator
-ERROR: [VRFC 10-91] clk is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd:45]
-ERROR: [VRFC 10-91] clk is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd:39]
-ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd:18]
-INFO: [VRFC 10-240] VHDL file C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd ignored due to errors
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_sync_signal_generator.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity tb_sync_signal_generator

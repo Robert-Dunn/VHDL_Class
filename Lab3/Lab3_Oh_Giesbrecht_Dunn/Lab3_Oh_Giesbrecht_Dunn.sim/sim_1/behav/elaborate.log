@@ -1,0 +1,17 @@
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 00e315f3c04e4c0e933e8595547c4992 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_sync_signal_generator_behav xil_defaultlib.tb_sync_signal_generator -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.sync_signals_generator [sync_signals_generator_default]
+Compiling architecture behaviour of entity xil_defaultlib.tb_sync_signal_generator
+Built simulation snapshot tb_sync_signal_generator_behav
