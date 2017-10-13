@@ -31,7 +31,7 @@ component debouncer is
   Port (
     asynch_in: in STD_LOGIC;
     clk: in std_logic;
-        synch_debounced: out std_logic
+    synch_debounced: out std_logic
   );
 end component;
 
@@ -243,16 +243,16 @@ DEB_But1: debouncer
     Generic map( tenTimes => 10)
     Port map(
           clk => clk,
-          asynch_in => switches(12),
-          synch_debounced => switches_deb(12)
+          asynch_in => buttons(1),
+          synch_debounced => buttons_deb(0)
     );
 
 DEB_But2: debouncer
     Generic map( tenTimes => 10)
     Port map(
           clk => clk,
-          asynch_in => switches(13),
-          synch_debounced => switches_deb(13)
+          asynch_in => buttons(2),
+          synch_debounced => buttons_deb(1)
     );
 
 VGA_SYNC: sync_signals_generator
@@ -327,10 +327,10 @@ green <= "0000" when (vga_blank = '1') else disp_green;
 -- ADDED
 -- These can be assigned to different switches/buttons
 reset <= buttons(0);
-box_color <= switches(13 downto 2);
-vga_select <= switches(1);
-inc_box <= buttons(1);
-dec_box <= buttons(2);
+box_color <= switches_deb(13 downto 2);
+vga_select <= switches_deb(1);
+inc_box <= buttons_deb(0);
+dec_box <= buttons_deb(1);
 
 -----------------------------------------------------------------------------
 -- OUTPUT SELECTOR:
