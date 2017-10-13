@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Oct 13 01:36:13 2017
+# Process ID: 4900
+# Current directory: C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent316 C:\Users\donald.dunn\Documents\School\ENEL 453\VHDL_Class\Lab3\Lab3_Oh_Giesbrecht_Dunn\Lab3_Oh_Giesbrecht_Dunn.xpr
+# Log file: C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/vivado.log
+# Journal file: C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.xpr}
+update_compile_order -fileset sources_1
+add_files -norecurse {{C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd}}
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {{C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_debouncer.vhd}}
+update_compile_order -fileset sim_1
+add_files -norecurse {{C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd}}
+add_files -norecurse {{C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd}}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_debouncer [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+add_files -norecurse {{C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd}}

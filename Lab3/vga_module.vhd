@@ -294,7 +294,7 @@ STRIPES_DFF: vga_stripes_dff
 	Port map ( pixel_clk  => i_pixel_clk,
                reset      => reset,
                next_pixel => show_stripe,
-               mode       => switches(0), -- can be a different switch
+               mode       => switches_deb(0), -- can be a different switch
                B          => stripe_blue,
                G          => stripe_green,
                R          => stripe_red
