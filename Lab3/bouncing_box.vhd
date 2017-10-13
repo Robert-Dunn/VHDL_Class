@@ -30,6 +30,7 @@ signal box_loc_x, box_loc_y: std_logic_vector(9 downto 0);
 signal box2_loc_x, box2_loc_y: std_logic_vector(9 downto 0);
 signal box3_loc_x, box3_loc_y: std_logic_vector(9 downto 0);
 signal box_move_dir_x, box_move_dir_y: std_logic;
+signal initals_xmax, initals_ymax: std_logic_vector(9 downto 0);
 
 signal S1 : std_logic_vector (9 downto 0);
 signal S2 : std_logic_vector (9 downto 0);
@@ -40,7 +41,7 @@ signal S6 : std_logic_vector (9 downto 0);
 signal S7 : std_logic_vector (9 downto 0);
 signal S8 : std_logic_vector (9 downto 0);
 
-
+ 
 constant C1 : std_logic_vector (9 downto 0):= "0000000001";
 constant C2 : std_logic_vector (9 downto 0):= "0000000010";
 constant C3 : std_logic_vector (9 downto 0):= "0000000011";
@@ -96,7 +97,60 @@ S8 <= M8 (9 downto 0);
   box2_loc_y <= box_loc_y;
   box3_loc_x <= box2_loc_x + S4 + gap;
   box3_loc_y <= box_loc_y;
+  initals_xmax <= "1010000000"- ((box3_loc_x + S4) - box_loc_x)  
+  initals_ymax <= "0111100000" - ((box3_loc_y + S4) - box_loc_y)
+  
+MoveLetters: process(clk, reset)
+begin
+    if (reset ='1') then
+        box_loc_x <= "0111000101";
+        box_loc_y <= "0001100010";
+        box_move_dir_x <= '0';
+        box_move_dir_y <= '0';
+        redraw <= (others=>'0');
+	elsif (rising_edge(clk)) then
+        if (kHz = '1') then
+            redraw <= redraw + 1;
+            if (redraw = "10000") then 		-- Determines the box's speed
+                redraw <= (others => '0');
+                if box_move_dir_x <= '0' then   -- Box moving right
+                    if (box_loc_x < initals_xmax) then -- Has not hit right wall
+                        box_loc_x <= box_loc_x + 1;
+                    else
+                        box_move_dir_x <= '1';	-- Box is now moving left
+                    end if;
+                else
+                    if (box_loc_x > box_loc_x_min) then
+                        box_loc_x <= box_loc_x - 1; -- Has not hit left wall
+                    else
+                        box_move_dir_x <= '0';	-- Box is now moving right
+                    end if;
+                end if;
 
+                -- Complete the Y-axis motion description here
+                -- It is very similar to X-axis motion
+                -- ADDED
+                if box_move_dir_y <= '0' then   -- Box moving down
+                    if (box_loc_y < initals_ymax) then -- Has not hit bottom wall
+                        box_loc_y <= box_loc_y + 1;
+                    else
+                        box_move_dir_y <= '1';    -- Box is now moving up
+                    end if;
+                else
+                    if (box_loc_y > box_loc_y_min) then
+                        box_loc_y <= box_loc_y - 1; -- Has not hit top wall
+                    else
+                        box_move_dir_y <= '0';    -- Box is now moving down
+                    end if;
+                end if;
+                -- End ADDED
+            end if;
+        end if;
+	end if;
+end process MoveLetters;
+  
+  
+  
 MoveBox: process(clk, reset)
 begin
     if (reset ='1') then
@@ -149,7 +203,7 @@ end process MoveBox;
 
 
 
-SwitchType: process (switch_type, box_width,scan_line_x,scan_line_y, box_loc_x,box_loc_y,box_color,S1,S2,S3,S4,S5,S6,S7,S8)
+SwitchType: process (switch_type,box_width,scan_line_x,scan_line_y, box_loc_x,box_loc_y,box_color,S1,S2,S3,S4,S5,S6,S7,S8)
 begin
 
 if (switch_type = '0') then
@@ -240,7 +294,7 @@ red   <= pixel_color(11 downto 8);
 green <= pixel_color(7 downto 4);
 blue  <= pixel_color(3 downto 0);
 
-box_loc_x_max <= "1010000000" - box_width - 1;
+box_loc_x_max <= "1010000000" - box_width - 1;  
 -- Describe the value for box_loc_y_max here:
 -- Hint: In binary, 640 is 1010000000 and 480 is 0111100000
 -- ADDED
