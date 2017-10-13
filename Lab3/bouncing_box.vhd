@@ -31,40 +31,71 @@ signal box2_loc_x, box2_loc_y: std_logic_vector(9 downto 0);
 signal box3_loc_x, box3_loc_y: std_logic_vector(9 downto 0);
 signal box_move_dir_x, box_move_dir_y: std_logic;
 
-
-constant G_x111, G_y12 :std_logic_vector(9 downto 0) :="0000000000";
-constant G_x39, G_y34 :std_logic_vector(9 downto 0) :="0000000001";
-constant G_x57 :std_logic_vector(9 downto 0) :="0000000010";
-constant G_x810 :std_logic_vector(9 downto 0) :="0000000011";
-constant G_x24612, G_y56 :std_logic_vector(9 downto 0) :="0000000100";
-constant  G_y78 :std_logic_vector(9 downto 0) :="0000000101";
-constant  G_y910 :std_logic_vector(9 downto 0) :="0000000110";
-constant G_y1112 :std_logic_vector(9 downto 0) :="0000001000";
-
-constant O_x17, O_y12 :std_logic_vector(9 downto 0) :="0000000000";
-constant O_x35 :std_logic_vector(9 downto 0) :="0000000001";
-constant O_y34 :std_logic_vector(9 downto 0) :="0000000010";
-constant O_x46 :std_logic_vector(9 downto 0) :="0000000011";
-constant O_x28 :std_logic_vector(9 downto 0) :="0000000100";
-constant O_y56 :std_logic_vector(9 downto 0) :="0000000110";
-constant O_y78 :std_logic_vector(9 downto 0) :="0000001000";
-
-constant D_x111, D_y12 :std_logic_vector(9 downto 0) :="0000000000";
-constant D_x37, D_y3456 :std_logic_vector(9 downto 0) :="0000000001";
-constant D_x48 :std_logic_vector(9 downto 0) :="0000000010";
-constant D_x25912 :std_logic_vector(9 downto 0) :="0000000011";
-constant D_x610 :std_logic_vector(9 downto 0) :="0000000100";
-constant D_y78910 :std_logic_vector(9 downto 0) :="0000000111";
-constant D_y1112 :std_logic_vector(9 downto 0) :="0000001000";
-
+signal S1 : std_logic_vector (9 downto 0);
+signal S2 : std_logic_vector (9 downto 0);
+signal S3 : std_logic_vector (9 downto 0);
+signal S4 : std_logic_vector (9 downto 0);
+signal S5 : std_logic_vector (9 downto 0);
+signal S6 : std_logic_vector (9 downto 0);
+signal S7 : std_logic_vector (9 downto 0);
+signal S8 : std_logic_vector (9 downto 0);
+signal sgap : std_logic_vector (9 downto 0);
+ 
+constant C1 : std_logic_vector (9 downto 0):= "0000000001"
+constant C2 : std_logic_vector (9 downto 0):= "0000000010"
+constant C3 : std_logic_vector (9 downto 0):= "0000000011"
+constant C4 : std_logic_vector (9 downto 0):= "0000000100"
+constant C5 : std_logic_vector (9 downto 0):= "0000000101"
+constant C6 : std_logic_vector (9 downto 0):= "0000000110"
+constant C7 : std_logic_vector (9 downto 0):= "0000000111"
+constant C8 : std_logic_vector (9 downto 0):= "0000001000"
 constant gap: std_logic_vector(9 downto 0) :="0000000010";
+
+
+signal M1 : std_logic_vector (19 downto 0);
+signal M2 : std_logic_vector (19 downto 0);
+signal M3 : std_logic_vector (19 downto 0);
+signal M4 : std_logic_vector (19 downto 0);
+signal M5 : std_logic_vector (19 downto 0);
+signal M6 : std_logic_vector (19 downto 0);
+signal M7 : std_logic_vector (19 downto 0);
+signal M8 : std_logic_vector (19 downto 0);
+signal mgap : std_logic_vector(19 downto 0);
 
 
 begin
 
-  box2_loc_x <= box_loc_x + G_x24612 + gap;
+M1 <= box_width * C1;
+S1 <= M1(9 downto 0);
+
+M2 <= box_width * C2;
+S2 <= M2 (9 downto 0);
+
+M3 <= box_width * C3;
+S3 <= M3 (9 downto 0);
+
+M4 <= box_width * C4;
+S4 <= M4 (9 downto 0);
+
+M5 <= box_width * C5;
+S5 <= M5 (9 downto 0);
+
+M6 <= box_width * C6;
+S6 <= M6 (9 downto 0);
+
+M7 <= box_width * C7;
+S7 <= M7 (9 downto 0);
+
+M8 <= box_width * C8;
+S8 <= M8 (9 downto 0);
+
+mgap <= box_width * gap;
+sgap <= mgap (9 downto 0);
+
+
+  box2_loc_x <= box_loc_x + S4 + sgap;
   box2_loc_y <= box_loc_y;
-  box3_loc_x <= box2_loc_x + O_x28 + gap;
+  box3_loc_x <= box2_loc_x + S4 + sgap;
   box3_loc_y <= box_loc_y;
 
 MoveBox: process(clk, reset)
@@ -132,73 +163,73 @@ if (switch_type = '0') then
       pixel_color <= "111111111111"; -- represents WHITE
      end if;
 else
-       if ((((scan_line_x >= box_loc_x) and
- 								                (scan_line_x <= box_loc_x + G_x24612 + box_width) and
- 								                (scan_line_y >=box_loc_y) and
- 								                (scan_line_y <= box_loc_y+ G_y1112 + box_width))
+       if 	(	 ((((scan_line_x >= box_loc_x) and
+ 				 (scan_line_x <= box_loc_x + S4) and
+ 				 (scan_line_y >=box_loc_y) and
+				 (scan_line_y <= box_loc_y+ S8))
 
-                              and
+                 and
 
-                             not(((scan_line_x >= box_loc_x+G_x39 + box_width) and
-                              	 (scan_line_x <= box_loc_x + G_x24612 + box_width) and
-                              	 (scan_line_y >=box_loc_y +G_y34 + box_width) and
-                              	 (scan_line_y <= box_loc_y+ G_y56 + box_width)))
+                 (not(((scan_line_x >= box_loc_x+S1  ) and
+                 (scan_line_x <= box_loc_x + S4  ) and
+                 (scan_line_y >=box_loc_y +S1  ) and
+                 (scan_line_y <= box_loc_y+ S4  ))))
 
-                            and
+                 and
 
-                             not (((scan_line_x >= box_loc_x+G_x39 + box_width) and
-                               	 (scan_line_x <= box_loc_x + G_x57 + box_width) and
-                               	 (scan_line_y >=box_loc_y +G_y56 + box_width) and
-                               	 (scan_line_y <= box_loc_y+ G_y78 + box_width)))
+                 (not(((scan_line_x >= box_loc_x+S1  ) and
+                 (scan_line_x <= box_loc_x + S2  ) and
+                 (scan_line_y >=box_loc_y +S4  ) and
+                 (scan_line_y <= box_loc_y+ S5 ))))
 
-                            and
+                 and
 
-                             not (((scan_line_x >= box_loc_x+G_x39 + box_width) and
-                                 (scan_line_x <= box_loc_x + G_x810 + box_width) and
-                              	 (scan_line_y >=box_loc_y +G_y78 + box_width) and
-                               	 (scan_line_y <= box_loc_y+ G_y910 + box_width)))) --Draws the G
+                 (not (((scan_line_x >= box_loc_x+S1  ) and
+                 (scan_line_x <= box_loc_x + S3  ) and
+                 (scan_line_y >=box_loc_y +S5  ) and
+                 (scan_line_y <= box_loc_y+ S6  )))))) --Draws the G
 
-                            or
+                 or
 
-                            (((scan_line_x >= box2_loc_x) and
-                            (scan_line_x <= box2_loc_x + O_x28 + box_width) and
-                            (scan_line_y >=box2_loc_y) and
-                            (scan_line_y <= box2_loc_y+ O_y78 + box_width))
+                 ((((scan_line_x >= box2_loc_x) and
+                 (scan_line_x <= box2_loc_x + S4) and
+                 (scan_line_y >=box2_loc_y) and
+                 (scan_line_y <= box2_loc_y+ S8))
 
-                            and
+                 and
 
-                            not(((scan_line_x >= box2_loc_x + O_x35 + box_width) and
-                              (scan_line_x <= box2_loc_x + O_x46 + box_width) and
-                              (scan_line_y >=box2_loc_y + O_y34 + box_width) and
-                              (scan_line_y <= box2_loc_y+ O_y56 + box_width)) ))  -- Draws the O
+                 (not(((scan_line_x >= box2_loc_x + S1 ) and
+                 (scan_line_x <= box2_loc_x + S3 ) and
+                 (scan_line_y >=box2_loc_y + S2) and
+                 (scan_line_y <= box2_loc_y+ S6 ))))))  -- Draws the O
 
-                            or
+                  or
 
-                              (((scan_line_x >= box3_loc_x) and
-                              (scan_line_x <= box3_loc_x + D_x610 + box_width) and
-                              (scan_line_y >=box3_loc_y) and
-                              (scan_line_y <= box2_loc_y+ D_y1112 + box_width))
+                 ((((scan_line_x >= box3_loc_x) and
+                 (scan_line_x <= box3_loc_x + S4 ) and
+                 (scan_line_y >=box3_loc_y) and
+                 (scan_line_y <= box2_loc_y+ S8))
 
-                            and
+                  and
 
-                            not(((scan_line_x >= box3_loc_x + D_x37 + box_width) and
-                               (scan_line_x <= box3_loc_x + D_x48 + box_width) and
-                               (scan_line_y >=box3_loc_y + D_y3456 + box_width) and
-                               (scan_line_y <= box2_loc_y+ D_y78910 + box_width)))
+                  (not(((scan_line_x >= box3_loc_x + S1 ) and
+                  (scan_line_x <= box3_loc_x + S2 ) and
+                  (scan_line_y >=box3_loc_y + S1 ) and
+                  (scan_line_y <= box2_loc_y+ S7 ))))
 
-                            and
+                  and
 
-                            not(((scan_line_x >= box3_loc_x + D_x25912 + box_width) and
-                               (scan_line_x <= box3_loc_x + D_x610 + box_width) and
-                               (scan_line_y >=box3_loc_y + D_y12 + box_width) and
-                               (scan_line_y <= box2_loc_y+ D_y3456 + box_width)))
+                  (not(((scan_line_x >= box3_loc_x + S3 ) and
+                  (scan_line_x <= box3_loc_x + S4) and
+                  (scan_line_y >=box3_loc_y + D_y12) and
+                  (scan_line_y <= box2_loc_y+ S1))))
 
-                            and
+                  and
 
-                            not(((scan_line_x >= box3_loc_x + D_x25912 + box_width) and
-                               (scan_line_x <= box3_loc_x + D_x610 + box_width) and
-                               (scan_line_y >=box3_loc_y + D_y78910 + box_width) and
-                               (scan_line_y <= box2_loc_y+ D_y1112 + box_width))))) then -- Draws the D
+                  (not(((scan_line_x >= box3_loc_x + S3) and
+                  (scan_line_x <= box3_loc_x + S4) and
+                  (scan_line_y >=box3_loc_y + S7) and
+                  (scan_line_y <= box2_loc_y+ S8))))))) then -- Draws the D
                pixel_color <= box_color;
             else
                pixel_color <= "111111111111";
