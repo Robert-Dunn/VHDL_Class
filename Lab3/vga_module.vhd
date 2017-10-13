@@ -96,6 +96,11 @@ signal disp_blue: std_logic_vector(3 downto 0);
 signal disp_red: std_logic_vector(3 downto 0);
 signal disp_green: std_logic_vector(3 downto 0);
 
+-- debounced signals
+signal switches_deb: std_logic_vector(13 downto 0);
+signal buttons_deb: std_logic_vector(1 downto 0); -- not debouncing reset
+
+
 -- Stripe block signals:
 signal show_stripe: std_logic;
 
