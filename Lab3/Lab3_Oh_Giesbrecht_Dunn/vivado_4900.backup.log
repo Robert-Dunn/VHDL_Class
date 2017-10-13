@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Oct 13 01:36:13 2017
+# Process ID: 4900
+# Current directory: C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent316 C:\Users\donald.dunn\Documents\School\ENEL 453\VHDL_Class\Lab3\Lab3_Oh_Giesbrecht_Dunn\Lab3_Oh_Giesbrecht_Dunn.xpr
+# Log file: C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/vivado.log
+# Journal file: C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn'
+INFO: [Project 1-313] Project file moved from 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.ip_user_files', nor could it be found using path 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+update_compile_order -fileset sources_1
+add_files -norecurse {{C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd}}
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {{C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_debouncer.vhd}}
+update_compile_order -fileset sim_1
+add_files -norecurse {{C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd}}
+WARNING: [filemgmt 56-12] File 'C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd' cannot be added to the project because it already exists in the project, skipping this file
+add_files -norecurse {{C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd}}
+WARNING: [filemgmt 56-12] File 'C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd' cannot be added to the project because it already exists in the project, skipping this file
+set_property top tb_debouncer [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+add_files -norecurse {{C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd}}
+WARNING: [filemgmt 56-12] File 'C:/Users/donald.dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd' cannot be added to the project because it already exists in the project, skipping this file
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 13 01:43:37 2017...
