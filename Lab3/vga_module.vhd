@@ -135,6 +135,126 @@ DEB_Sw0: debouncer
           synch_debounced => switches_deb(0)
     );
 
+DEB_Sw1: debouncer
+    Generic map( tenTimes => 10)
+    Port map(
+          clk => clk,
+          asynch_in => switches(1),
+          synch_debounced => switches_deb(1)
+    );
+
+DEB_Sw2: debouncer
+    Generic map( tenTimes => 10)
+    Port map(
+          clk => clk,
+          asynch_in => switches(2),
+          synch_debounced => switches_deb(2)
+    );
+
+DEB_Sw3: debouncer
+    Generic map( tenTimes => 10)
+    Port map(
+          clk => clk,
+          asynch_in => switches(3),
+          synch_debounced => switches_deb(3)
+    );
+
+DEB_Sw4: debouncer
+    Generic map( tenTimes => 10)
+    Port map(
+         clk => clk,
+          asynch_in => switches(4),
+          synch_debounced => switches_deb(4)
+    );
+
+DEB_Sw5: debouncer
+    Generic map( tenTimes => 10)
+    Port map(
+          clk => clk,
+          asynch_in => switches(5),
+          synch_debounced => switches_deb(5)
+    );
+
+DEB_Sw6: debouncer
+    Generic map( tenTimes => 10)
+    Port map(
+          clk => clk,
+          asynch_in => switches(6),
+          synch_debounced => switches_deb(6)
+    );
+
+DEB_Sw7: debouncer
+    Generic map( tenTimes => 10)
+    Port map(
+          clk => clk,
+          asynch_in => switches(7),
+          synch_debounced => switches_deb(7)
+    );
+
+DEB_Sw8: debouncer
+    Generic map( tenTimes => 10)
+    Port map(
+          clk => clk,
+          asynch_in => switches(8),
+          synch_debounced => switches_deb(8)
+    );
+
+DEB_Sw9: debouncer
+    Generic map( tenTimes => 10)
+    Port map(
+          clk => clk,
+          asynch_in => switches(9),
+          synch_debounced => switches_deb(9)
+    );
+
+DEB_Sw10: debouncer
+    Generic map( tenTimes => 10)
+    Port map(
+         clk => clk,
+          asynch_in => switches(10),
+          synch_debounced => switches_deb(10)
+    );
+
+DEB_Sw11: debouncer
+    Generic map( tenTimes => 10)
+    Port map(
+          clk => clk,
+          asynch_in => switches(11),
+          synch_debounced => switches_deb(11)
+    );
+
+DEB_Sw12: debouncer
+    Generic map( tenTimes => 10)
+    Port map(
+          clk => clk,
+          asynch_in => switches(12),
+          synch_debounced => switches_deb(12)
+    );
+
+DEB_Sw13: debouncer
+    Generic map( tenTimes => 10)
+    Port map(
+          clk => clk,
+          asynch_in => switches(13),
+          synch_debounced => switches_deb(13)
+    );
+
+DEB_But1: debouncer
+    Generic map( tenTimes => 10)
+    Port map(
+          clk => clk,
+          asynch_in => switches(12),
+          synch_debounced => switches_deb(12)
+    );
+
+DEB_But2: debouncer
+    Generic map( tenTimes => 10)
+    Port map(
+          clk => clk,
+          asynch_in => switches(13),
+          synch_debounced => switches_deb(13)
+    );
+
 VGA_SYNC: sync_signals_generator
     Port map( 	pixel_clk   => i_pixel_clk,
                 reset       => reset,
