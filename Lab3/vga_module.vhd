@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity vga_module is
     Port (  clk : in  STD_LOGIC;
             buttons: in STD_LOGIC_VECTOR(2 downto 0);
-            switches: in STD_LOGIC_VECTOR(13 downto 0);
+            switches: in STD_LOGIC_VECTOR(14 downto 0);
             red: out STD_LOGIC_VECTOR(3 downto 0);
             green: out STD_LOGIC_VECTOR(3 downto 0);
             blue: out STD_LOGIC_VECTOR(3 downto 0);
@@ -78,6 +78,7 @@ component vga_stripes_dff is
  component bouncing_box is
  Port (  clk : in  STD_LOGIC;
          reset : in  STD_LOGIC;
+         switch_type : in STD_LOGIC;
          scan_line_x: in STD_LOGIC_VECTOR(10 downto 0);
          scan_line_y: in STD_LOGIC_VECTOR(10 downto 0);
          box_color: in STD_LOGIC_VECTOR(11 downto 0);
@@ -99,7 +100,7 @@ signal disp_red: std_logic_vector(3 downto 0);
 signal disp_green: std_logic_vector(3 downto 0);
 
 -- debounced signals
-signal switches_deb: std_logic_vector(13 downto 0);
+signal switches_deb: std_logic_vector(14 downto 0);
 signal buttons_deb: std_logic_vector(1 downto 0); -- not debouncing reset
 
 -- Stripe block signals:
@@ -241,6 +242,14 @@ DEB_Sw13: debouncer
           synch_debounced => switches_deb(13)
     );
 
+DEB_Sw14: debouncer
+    Generic map( tenTimes => 10)
+    Port map(
+          clk => clk,
+          asynch_in => switches(14),
+          synch_debounced => switches_deb(14)
+    );
+
 DEB_But1: debouncer
     Generic map( tenTimes => 10)
     Port map(
@@ -307,6 +316,7 @@ STRIPES_DFF: vga_stripes_dff
 BOX: bouncing_box
     Port map ( clk         => clk,
                reset       => reset,
+               switch_type => switches_deb(14),
                scan_line_x => scan_line_x,
                scan_line_y => scan_line_y,
                box_color   => box_color,

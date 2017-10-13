@@ -2,5 +2,12 @@
 2017.2
 Jun 15 2017
 18:52:51
+C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd,1507926874,vhdl,,,,bouncing_box,,,,,,,,
+C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd,1507644580,vhdl,,,,clock_divider,,,,,,,,
+C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd,1507903862,vhdl,,,,debouncer,,,,,,,,
+C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/downcounter1.vhd,1507644580,vhdl,,,,downcounter,,,,,,,,
 C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd,1507923551,vhdl,,,,sync_signals_generator,,,,,,,,
-C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_sync_signal_generator.vhd,1507924437,vhdl,,,,tb_sync_signal_generator,,,,,,,,
+C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_vga_module.vhd,1507927369,vhdl,,,,tb_vga_module,,,,,,,,
+C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/up_down_counter.vhd,1507644580,vhdl,,,,up_down_counter,,,,,,,,
+C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd,1507927148,vhdl,,,,vga_module,,,,,,,,
+C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_stripes_dff.vhd,1507923448,vhdl,,,,vga_stripes_dff,,,,,,,,

@@ -1190,3 +1190,726 @@ restart
 INFO: [Simtcl 6-17] Simulation restarted
 run 30 ms
 run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 900.453 ; gain = 0.000
+set_property top bouncing_box [current_fileset]
+update_compile_order -fileset sources_1
+set_property top tb_bouncing_box [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+current_sim simulation_4
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_bouncing_box_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_clock_divider_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_sync_signal_generator_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_up_down_counter_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_vga_stripes_dff_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bouncing_box' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj tb_bouncing_box_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity bouncing_box
+ERROR: [VRFC 10-1412] syntax error near constant [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:45]
+ERROR: [VRFC 10-1412] syntax error near constant [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:46]
+ERROR: [VRFC 10-1412] syntax error near constant [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:47]
+ERROR: [VRFC 10-1412] syntax error near constant [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:48]
+ERROR: [VRFC 10-1412] syntax error near constant [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:49]
+ERROR: [VRFC 10-1412] syntax error near constant [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:50]
+ERROR: [VRFC 10-1412] syntax error near constant [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:51]
+ERROR: [VRFC 10-1412] syntax error near constant [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:52]
+ERROR: [VRFC 10-91] c1 is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:68]
+ERROR: [VRFC 10-91] c2 is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:71]
+ERROR: [VRFC 10-91] c3 is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:74]
+ERROR: [VRFC 10-91] c4 is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:77]
+ERROR: [VRFC 10-91] c5 is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:80]
+ERROR: [VRFC 10-91] c6 is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:83]
+ERROR: [VRFC 10-91] c7 is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:86]
+ERROR: [VRFC 10-91] c8 is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:89]
+ERROR: [VRFC 10-91] gap is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:92]
+ERROR: [VRFC 10-91] d_y12 is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:224]
+ERROR: [VRFC 10-2123] 0 definitions of operator "and" match here [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:222]
+INFO: [#UNDEF] Sorry, too many errors..
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_bouncing_box
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_bouncing_box_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_clock_divider_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_sync_signal_generator_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_up_down_counter_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_vga_stripes_dff_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bouncing_box' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj tb_bouncing_box_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity bouncing_box
+ERROR: [VRFC 10-91] d_y12 is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:224]
+ERROR: [VRFC 10-2123] 0 definitions of operator "and" match here [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:222]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:21]
+INFO: [VRFC 10-240] VHDL file C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd ignored due to errors
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_bouncing_box
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_bouncing_box_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_clock_divider_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_sync_signal_generator_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_up_down_counter_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_vga_stripes_dff_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bouncing_box' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj tb_bouncing_box_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity bouncing_box
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_bouncing_box
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 00e315f3c04e4c0e933e8595547c4992 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bouncing_box_behav xil_defaultlib.tb_bouncing_box -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.bouncing_box [bouncing_box_default]
+Compiling architecture behavior of entity xil_defaultlib.tb_bouncing_box
+Built simulation snapshot tb_bouncing_box_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Rob -notrace
+couldn't read file "C:/Users/Rob": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 13 14:06:27 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 900.453 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bouncing_box_behav -key {Behavioral:sim_1:Functional:tb_bouncing_box} -tclbatch {tb_bouncing_box.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source tb_bouncing_box.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR: Array sizes do not match, left array has 20 elements, right array has 19 elements
+Time: 0 ps  Iteration: 0  Process: /tb_bouncing_box/uut/line__92
+  File: C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd
+
+HDL Line: C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:92
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bouncing_box_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 900.453 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_bouncing_box_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_clock_divider_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_sync_signal_generator_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_up_down_counter_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_vga_stripes_dff_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bouncing_box' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj tb_bouncing_box_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity bouncing_box
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_bouncing_box
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 00e315f3c04e4c0e933e8595547c4992 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bouncing_box_behav xil_defaultlib.tb_bouncing_box -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.bouncing_box [bouncing_box_default]
+Compiling architecture behavior of entity xil_defaultlib.tb_bouncing_box
+Built simulation snapshot tb_bouncing_box_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Rob -notrace
+couldn't read file "C:/Users/Rob": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 13 14:14:41 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bouncing_box_behav -key {Behavioral:sim_1:Functional:tb_bouncing_box} -tclbatch {tb_bouncing_box.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source tb_bouncing_box.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bouncing_box_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 900.453 ; gain = 0.000
+set_property top vga_module [current_fileset]
+update_compile_order -fileset sources_1
+set_property top tb_vga_module [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_bouncing_box_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_clock_divider_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_sync_signal_generator_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_up_down_counter_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_vga_stripes_dff_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_module' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj tb_vga_module_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity bouncing_box
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity clock_divider
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity debouncer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/downcounter1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity downcounter
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sync_signals_generator
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/up_down_counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity up_down_counter
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vga_module
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_stripes_dff.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vga_stripes_dff
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_vga_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_vga_module
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 00e315f3c04e4c0e933e8595547c4992 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_vga_module_behav xil_defaultlib.tb_vga_module -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-704] formal switch_type has no actual or default value [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:14]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit tb_vga_module in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property top tb_bouncing_box [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+set_property top bouncing_box [current_fileset]
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_bouncing_box_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_clock_divider_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_sync_signal_generator_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_up_down_counter_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_vga_stripes_dff_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bouncing_box' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj tb_bouncing_box_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity bouncing_box
+ERROR: [VRFC 10-91] d_y12 is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:223]
+ERROR: [VRFC 10-2123] 0 definitions of operator "and" match here [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:221]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:21]
+INFO: [VRFC 10-240] VHDL file C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd ignored due to errors
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_bouncing_box
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+current_sim simulation_9
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_bouncing_box_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_clock_divider_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_sync_signal_generator_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_up_down_counter_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_vga_stripes_dff_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bouncing_box' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj tb_bouncing_box_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity bouncing_box
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_bouncing_box
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 00e315f3c04e4c0e933e8595547c4992 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bouncing_box_behav xil_defaultlib.tb_bouncing_box -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.bouncing_box [bouncing_box_default]
+Compiling architecture behavior of entity xil_defaultlib.tb_bouncing_box
+Built simulation snapshot tb_bouncing_box_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Rob -notrace
+couldn't read file "C:/Users/Rob": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 13 14:29:56 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bouncing_box_behav -key {Behavioral:sim_1:Functional:tb_bouncing_box} -tclbatch {tb_bouncing_box.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source tb_bouncing_box.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bouncing_box_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 901.586 ; gain = 0.000
+set_property top vga_module [current_fileset]
+update_compile_order -fileset sources_1
+set_property top tb_vga_module [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_bouncing_box_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_clock_divider_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_sync_signal_generator_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_up_down_counter_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_vga_stripes_dff_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_module' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj tb_vga_module_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity bouncing_box
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity clock_divider
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity debouncer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/downcounter1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity downcounter
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sync_signals_generator
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/up_down_counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity up_down_counter
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vga_module
+ERROR: [VRFC 10-719] formal port/generic <switch_type> is not declared in <bouncing_box> [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:318]
+ERROR: [VRFC 10-704] formal scan_line_x has no actual or default value [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:315]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:16]
+INFO: [VRFC 10-240] VHDL file C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd ignored due to errors
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_stripes_dff.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vga_stripes_dff
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_vga_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_vga_module
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_bouncing_box_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_clock_divider_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_sync_signal_generator_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_up_down_counter_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_vga_stripes_dff_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_module' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj tb_vga_module_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity bouncing_box
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity clock_divider
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity debouncer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/downcounter1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity downcounter
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sync_signals_generator
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/up_down_counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity up_down_counter
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vga_module
+ERROR: [VRFC 10-706] formal switches_deb is not a port [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:318]
+ERROR: [VRFC 10-91] switch_type is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:318]
+ERROR: [VRFC 10-283] actual of formal object port switches_deb cannot be an expression [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:318]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:16]
+INFO: [VRFC 10-240] VHDL file C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd ignored due to errors
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_stripes_dff.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vga_stripes_dff
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_vga_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_vga_module
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_bouncing_box_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_clock_divider_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_sync_signal_generator_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_up_down_counter_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_vga_stripes_dff_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_module' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj tb_vga_module_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity bouncing_box
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity clock_divider
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity debouncer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/downcounter1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity downcounter
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sync_signals_generator
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/up_down_counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity up_down_counter
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vga_module
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_stripes_dff.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vga_stripes_dff
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_vga_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_vga_module
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 00e315f3c04e4c0e933e8595547c4992 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_vga_module_behav xil_defaultlib.tb_vga_module -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-664] expression has 14 elements ; expected 15 [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_vga_module.vhd:72]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit tb_vga_module in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_bouncing_box_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_clock_divider_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_sync_signal_generator_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_up_down_counter_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_vga_stripes_dff_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_module' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj tb_vga_module_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity bouncing_box
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity clock_divider
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity debouncer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/downcounter1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity downcounter
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sync_signals_generator
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/up_down_counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity up_down_counter
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vga_module
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_stripes_dff.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vga_stripes_dff
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_vga_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_vga_module
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 00e315f3c04e4c0e933e8595547c4992 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_vga_module_behav xil_defaultlib.tb_vga_module -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.debouncer [debouncer_default]
+Compiling architecture behavioral of entity xil_defaultlib.sync_signals_generator [sync_signals_generator_default]
+Compiling architecture behavioral of entity xil_defaultlib.up_down_counter [\up_down_counter(width=9)\]
+Compiling architecture behavioral of entity xil_defaultlib.downcounter [\downcounter(period=3,width=2)\]
+Compiling architecture behavioral of entity xil_defaultlib.downcounter [\downcounter(period=99999,width=...]
+Compiling architecture behavioral of entity xil_defaultlib.downcounter [\downcounter(period=9,width=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.downcounter [\downcounter(period=5)\]
+Compiling architecture behavioral of entity xil_defaultlib.clock_divider [clock_divider_default]
+Compiling architecture behavioral of entity xil_defaultlib.vga_stripes_dff [vga_stripes_dff_default]
+Compiling architecture behavioral of entity xil_defaultlib.bouncing_box [bouncing_box_default]
+Compiling architecture behavioral of entity xil_defaultlib.vga_module [vga_module_default]
+Compiling architecture behavior of entity xil_defaultlib.tb_vga_module
+Built simulation snapshot tb_vga_module_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Rob -notrace
+couldn't read file "C:/Users/Rob": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 13 14:40:05 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_vga_module_behav -key {Behavioral:sim_1:Functional:tb_vga_module} -tclbatch {tb_vga_module.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source tb_vga_module.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_vga_module_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 920.723 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_bouncing_box_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_clock_divider_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_sync_signal_generator_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_up_down_counter_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_vga_stripes_dff_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_vga_module' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj tb_vga_module_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity bouncing_box
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity clock_divider
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity debouncer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/downcounter1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity downcounter
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sync_signals_generator
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/up_down_counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity up_down_counter
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vga_module
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_stripes_dff.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vga_stripes_dff
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_vga_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_vga_module
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 00e315f3c04e4c0e933e8595547c4992 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_vga_module_behav xil_defaultlib.tb_vga_module -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.debouncer [debouncer_default]
+Compiling architecture behavioral of entity xil_defaultlib.sync_signals_generator [sync_signals_generator_default]
+Compiling architecture behavioral of entity xil_defaultlib.up_down_counter [\up_down_counter(width=9)\]
+Compiling architecture behavioral of entity xil_defaultlib.downcounter [\downcounter(period=3,width=2)\]
+Compiling architecture behavioral of entity xil_defaultlib.downcounter [\downcounter(period=99999,width=...]
+Compiling architecture behavioral of entity xil_defaultlib.downcounter [\downcounter(period=9,width=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.downcounter [\downcounter(period=5)\]
+Compiling architecture behavioral of entity xil_defaultlib.clock_divider [clock_divider_default]
+Compiling architecture behavioral of entity xil_defaultlib.vga_stripes_dff [vga_stripes_dff_default]
+Compiling architecture behavioral of entity xil_defaultlib.bouncing_box [bouncing_box_default]
+Compiling architecture behavioral of entity xil_defaultlib.vga_module [vga_module_default]
+Compiling architecture behavior of entity xil_defaultlib.tb_vga_module
+Built simulation snapshot tb_vga_module_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Rob -notrace
+couldn't read file "C:/Users/Rob": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 13 14:43:00 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_vga_module_behav -key {Behavioral:sim_1:Functional:tb_vga_module} -tclbatch {tb_vga_module.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source tb_vga_module.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_vga_module_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 920.723 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 30 ms
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 920.723 ; gain = 0.000

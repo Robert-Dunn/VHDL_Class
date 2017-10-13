@@ -1,4 +1,18 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity bouncing_box
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity clock_divider
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity debouncer
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/downcounter1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity downcounter
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity sync_signals_generator
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_sync_signal_generator.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity tb_sync_signal_generator
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/up_down_counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity up_down_counter
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vga_module
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_stripes_dff.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vga_stripes_dff
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_vga_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_vga_module

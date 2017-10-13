@@ -39,28 +39,28 @@ signal S5 : std_logic_vector (9 downto 0);
 signal S6 : std_logic_vector (9 downto 0);
 signal S7 : std_logic_vector (9 downto 0);
 signal S8 : std_logic_vector (9 downto 0);
-signal sgap : std_logic_vector (9 downto 0);
- 
-constant C1 : std_logic_vector (9 downto 0):= "0000000001"
-constant C2 : std_logic_vector (9 downto 0):= "0000000010"
-constant C3 : std_logic_vector (9 downto 0):= "0000000011"
-constant C4 : std_logic_vector (9 downto 0):= "0000000100"
-constant C5 : std_logic_vector (9 downto 0):= "0000000101"
-constant C6 : std_logic_vector (9 downto 0):= "0000000110"
-constant C7 : std_logic_vector (9 downto 0):= "0000000111"
-constant C8 : std_logic_vector (9 downto 0):= "0000001000"
+
+
+constant C1 : std_logic_vector (9 downto 0):= "0000000001";
+constant C2 : std_logic_vector (9 downto 0):= "0000000010";
+constant C3 : std_logic_vector (9 downto 0):= "0000000011";
+constant C4 : std_logic_vector (9 downto 0):= "0000000100";
+constant C5 : std_logic_vector (9 downto 0):= "0000000101";
+constant C6 : std_logic_vector (9 downto 0):= "0000000110";
+constant C7 : std_logic_vector (9 downto 0):= "0000000111";
+constant C8 : std_logic_vector (9 downto 0):= "0000001000";
 constant gap: std_logic_vector(9 downto 0) :="0000000010";
 
 
-signal M1 : std_logic_vector (19 downto 0);
-signal M2 : std_logic_vector (19 downto 0);
-signal M3 : std_logic_vector (19 downto 0);
-signal M4 : std_logic_vector (19 downto 0);
-signal M5 : std_logic_vector (19 downto 0);
-signal M6 : std_logic_vector (19 downto 0);
-signal M7 : std_logic_vector (19 downto 0);
-signal M8 : std_logic_vector (19 downto 0);
-signal mgap : std_logic_vector(19 downto 0);
+signal M1 : std_logic_vector (18 downto 0);
+signal M2 : std_logic_vector (18 downto 0);
+signal M3 : std_logic_vector (18 downto 0);
+signal M4 : std_logic_vector (18 downto 0);
+signal M5 : std_logic_vector (18 downto 0);
+signal M6 : std_logic_vector (18 downto 0);
+signal M7 : std_logic_vector (18 downto 0);
+signal M8 : std_logic_vector (18 downto 0);
+
 
 
 begin
@@ -89,13 +89,12 @@ S7 <= M7 (9 downto 0);
 M8 <= box_width * C8;
 S8 <= M8 (9 downto 0);
 
-mgap <= box_width * gap;
-sgap <= mgap (9 downto 0);
 
 
-  box2_loc_x <= box_loc_x + S4 + sgap;
+
+  box2_loc_x <= box_loc_x + S4 + gap;
   box2_loc_y <= box_loc_y;
-  box3_loc_x <= box2_loc_x + S4 + sgap;
+  box3_loc_x <= box2_loc_x + S4 + gap;
   box3_loc_y <= box_loc_y;
 
 MoveBox: process(clk, reset)
@@ -150,7 +149,7 @@ end process MoveBox;
 
 
 
-SwitchType: process (clk)
+SwitchType: process (switch_type, box_width,scan_line_x,scan_line_y, box_loc_x,box_loc_y,box_color,S1,S2,S3,S4,S5,S6,S7,S8)
 begin
 
 if (switch_type = '0') then
@@ -221,7 +220,7 @@ else
 
                   (not(((scan_line_x >= box3_loc_x + S3 ) and
                   (scan_line_x <= box3_loc_x + S4) and
-                  (scan_line_y >=box3_loc_y + D_y12) and
+                  (scan_line_y >=box3_loc_y) and
                   (scan_line_y <= box2_loc_y+ S1))))
 
                   and

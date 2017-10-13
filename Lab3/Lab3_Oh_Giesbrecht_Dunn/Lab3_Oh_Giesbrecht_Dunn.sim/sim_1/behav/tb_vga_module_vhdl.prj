@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../../bouncing_box.vhd"
+vhdl xil_defaultlib  "../../../../clock_divider1.vhd"
+vhdl xil_defaultlib  "../../../../debouncer.vhd"
+vhdl xil_defaultlib  "../../../../downcounter1.vhd"
+vhdl xil_defaultlib  "../../../../sync_signal_generator.vhd"
+vhdl xil_defaultlib  "../../../../up_down_counter.vhd"
+vhdl xil_defaultlib  "../../../../vga_module.vhd"
+vhdl xil_defaultlib  "../../../../vga_stripes_dff.vhd"
+vhdl xil_defaultlib  "../../../../tb_vga_module.vhd"
+
+# Do not sort compile order
+nosort
