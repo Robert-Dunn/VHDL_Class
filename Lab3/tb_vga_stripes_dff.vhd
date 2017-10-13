@@ -7,9 +7,10 @@ end tb_vga_stripes_dff;
 architecture behaviour of tb_vga_stripes_dff is
 
     -- Component Declaration for the Unit Under Test (UUT)
- 
+
     COMPONENT vga_stripes_dff
      Port ( pixel_clk : in  STD_LOGIC;
+            clk: in STD_LOGIC;
             reset : in  STD_LOGIC;
             next_pixel : in  STD_LOGIC;
             mode: in STD_LOGIC;
@@ -18,11 +19,12 @@ architecture behaviour of tb_vga_stripes_dff is
             R : out  STD_LOGIC_VECTOR (3 downto 0)
            );
     END COMPONENT;
-    
+
     --Inputs
     signal pixel_clk : std_logic;
+    signal clk : std_logic;
     signal reset : std_logic;
-    signal next_pixel : std_logic := '1'; 
+    signal next_pixel : std_logic := '1';
     signal mode : std_logic;
 
 	--Outputs
@@ -32,12 +34,14 @@ architecture behaviour of tb_vga_stripes_dff is
 
    -- Clock period definitions
    constant clk_period : time := 10 ns;
- 
+   constant pix_clk_period : time := 40 ns;
+
 BEGIN
- 
+
 	-- Instantiate the Unit Under Test (UUT)
    uut: vga_stripes_dff PORT MAP (
           pixel_clk => pixel_clk,
+          clk => clk,
           reset => reset,
           next_pixel => next_pixel,
           mode => mode,
@@ -46,31 +50,40 @@ BEGIN
           R => R
         );
 
-   -- Clock process
-   ClkProcess :process
+    -- Pixel Clock process
+    ClkProcess :process
+    begin
+ 		clk <= '0';
+ 		wait for clk_period/2;
+ 		clk <= '1';
+ 		wait for clk_period/2;
+    end process;
+
+   -- Pixel Clock process
+   PixClkProcess :process
    begin
 		pixel_clk <= '0';
-		wait for clk_period/2;
+		wait for pix_clk_period/2;
 		pixel_clk <= '1';
-		wait for clk_period/2;
-   end process; 
+		wait for pix_clk_period/2;
+   end process;
 
    -- Reset process
    ResetProcess: process
-   begin		
+   begin
       -- hold reset state for 100 ns.
 		reset <= '1';
-      wait for 100 ns;	
+      wait for 100 ns;
 		reset <= '0';
       wait;
    end process;
 
   -- Mode process
   ModeProcess: process
-  begin        
+  begin
      -- Let the state machine cycle fully in each mode
        mode <= '0';
-     wait for clk_period * 640;    
+     wait for clk_period * 640;
        mode <= '1';
      wait for clk_period * 640;
      next_pixel <= '0';

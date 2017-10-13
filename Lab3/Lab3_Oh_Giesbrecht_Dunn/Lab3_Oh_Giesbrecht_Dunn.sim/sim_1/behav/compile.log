@@ -1,14 +1,8 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity bouncing_box
-ERROR: [VRFC 10-1412] syntax error near pixel_color [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:120]
-ERROR: [VRFC 10-1449] this construct is only supported in VHDL 1076-2008 [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:120]
-ERROR: [VRFC 10-1412] syntax error near else [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:127]
-ERROR: [VRFC 10-1412] syntax error near not [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:140]
-ERROR: [VRFC 10-91] box2_loc_x is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:189]
-ERROR: [VRFC 10-91] box2_loc_y is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:190]
-ERROR: [VRFC 10-91] box3_loc_x is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:191]
-ERROR: [VRFC 10-91] box3_loc_y is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:192]
-ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:21]
-INFO: [VRFC 10-240] VHDL file C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd ignored due to errors
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_bouncing_box.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity tb_bouncing_box
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sync_signals_generator
+ERROR: [VRFC 10-91] clk is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd:45]
+ERROR: [VRFC 10-91] clk is not declared [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd:39]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd:18]
+INFO: [VRFC 10-240] VHDL file C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd ignored due to errors
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_sync_signal_generator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_sync_signal_generator

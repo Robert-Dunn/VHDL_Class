@@ -2,11 +2,11 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Fri Oct 13 10:30:29 2017
-# Process ID: 2300
+# Start of session at: Fri Oct 13 12:00:25 2017
+# Process ID: 15148
 # Current directory: C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.runs/synth_1
-# Command line: vivado.exe -log vga_module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_module.tcl
-# Log file: C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.runs/synth_1/vga_module.vds
+# Command line: vivado.exe -log bouncing_box.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bouncing_box.tcl
+# Log file: C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.runs/synth_1/bouncing_box.vds
 # Journal file: C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source vga_module.tcl -notrace
+source bouncing_box.tcl -notrace

@@ -37,3 +37,106 @@ update_compile_order -fileset sources_1
 close_sim
 launch_simulation
 launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -norecurse {{C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd}}
+remove_files  {{C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd}}
+add_files -norecurse {{C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top bouncing_box [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source tb_bouncing_box.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top clock_divider [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_clock_divider [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_clock_divider.tcl
+add_files -norecurse {{C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/downcounter1.vhd}}
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source tb_clock_divider.tcl
+add_files -norecurse {{C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd} {C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_stripes_dff.vhd}}
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top vga_stripes_dff [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_vga_stripes_dff [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source tb_vga_stripes_dff.tcl
+restart
+run 30 ms
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top up_down_counter [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_up_down_counter [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_up_down_counter.tcl
+add_files -norecurse {{C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/sync_signal_generator.vhd}}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top sync_signals_generator [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_sync_signal_generator [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_simulation

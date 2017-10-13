@@ -3,6 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity vga_stripes_dff is
     Port ( pixel_clk : in  STD_LOGIC;
+           clk: in STD_LOGIC;
            reset : in  STD_LOGIC;
            next_pixel : in  STD_LOGIC;
 		   mode: in STD_LOGIC;

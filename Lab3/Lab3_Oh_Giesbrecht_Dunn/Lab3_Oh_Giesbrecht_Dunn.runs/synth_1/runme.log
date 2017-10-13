@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log vga_module.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_module.tcl
+    with args -log bouncing_box.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bouncing_box.tcl
 
 
 ****** Vivado v2017.2 (64-bit)
@@ -8,363 +8,37 @@
   **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
-source vga_module.tcl -notrace
-Command: synth_design -top vga_module -part xc7a35tcpg236-1
+source bouncing_box.tcl -notrace
+Command: synth_design -top bouncing_box -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11180 
----------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 306.676 ; gain = 76.012
----------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'vga_module' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:16]
-	Parameter tenTimes bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd:6' bound to instance 'DEB_Sw0' of component 'debouncer' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:130]
-INFO: [Synth 8-638] synthesizing module 'debouncer' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd:15]
-	Parameter tenTimes bound to: 10 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'debouncer' (1#1) [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd:15]
-	Parameter tenTimes bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd:6' bound to instance 'DEB_Sw1' of component 'debouncer' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:138]
-	Parameter tenTimes bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd:6' bound to instance 'DEB_Sw2' of component 'debouncer' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:146]
-	Parameter tenTimes bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd:6' bound to instance 'DEB_Sw3' of component 'debouncer' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:154]
-	Parameter tenTimes bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd:6' bound to instance 'DEB_Sw4' of component 'debouncer' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:162]
-	Parameter tenTimes bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd:6' bound to instance 'DEB_Sw5' of component 'debouncer' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:170]
-	Parameter tenTimes bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd:6' bound to instance 'DEB_Sw6' of component 'debouncer' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:178]
-	Parameter tenTimes bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd:6' bound to instance 'DEB_Sw7' of component 'debouncer' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:186]
-	Parameter tenTimes bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd:6' bound to instance 'DEB_Sw8' of component 'debouncer' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:194]
-	Parameter tenTimes bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd:6' bound to instance 'DEB_Sw9' of component 'debouncer' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:202]
-	Parameter tenTimes bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd:6' bound to instance 'DEB_Sw10' of component 'debouncer' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:210]
-	Parameter tenTimes bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd:6' bound to instance 'DEB_Sw11' of component 'debouncer' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:218]
-	Parameter tenTimes bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd:6' bound to instance 'DEB_Sw12' of component 'debouncer' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:226]
-	Parameter tenTimes bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd:6' bound to instance 'DEB_Sw13' of component 'debouncer' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:234]
-	Parameter tenTimes bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd:6' bound to instance 'DEB_But1' of component 'debouncer' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:242]
-	Parameter tenTimes bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/debouncer.vhd:6' bound to instance 'DEB_But2' of component 'debouncer' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:250]
-INFO: [Synth 8-637] synthesizing blackbox instance 'VGA_SYNC' of component 'sync_signals_generator' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:258]
-	Parameter WIDTH bound to: 9 - type: integer 
-INFO: [Synth 8-3491] module 'up_down_counter' declared at 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/up_down_counter.vhd:6' bound to instance 'CHANGE_BOX_SIZE' of component 'up_down_counter' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:268]
-INFO: [Synth 8-638] synthesizing module 'up_down_counter' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/up_down_counter.vhd:18]
-	Parameter WIDTH bound to: 9 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'up_down_counter' (2#1) [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/up_down_counter.vhd:18]
-INFO: [Synth 8-3491] module 'clock_divider' declared at 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd:4' bound to instance 'DIVIDER' of component 'clock_divider' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:280]
-INFO: [Synth 8-638] synthesizing module 'clock_divider' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd:20]
-	Parameter period bound to: 3 - type: integer 
-	Parameter WIDTH bound to: 2 - type: integer 
-INFO: [Synth 8-637] synthesizing blackbox instance 'megaHzClock_25MHz' of component 'downcounter' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd:50]
-	Parameter period bound to: 99999 - type: integer 
-	Parameter WIDTH bound to: 17 - type: integer 
-INFO: [Synth 8-637] synthesizing blackbox instance 'kiloHzClock' of component 'downcounter' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd:63]
-	Parameter period bound to: 9 - type: integer 
-	Parameter WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-637] synthesizing blackbox instance 'hundredHzClock' of component 'downcounter' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd:76]
-	Parameter period bound to: 9 - type: integer 
-	Parameter WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-637] synthesizing blackbox instance 'tenHzClock' of component 'downcounter' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd:89]
-	Parameter period bound to: 9 - type: integer 
-	Parameter WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-637] synthesizing blackbox instance 'oneHzClock' of component 'downcounter' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd:102]
-	Parameter period bound to: 9 - type: integer 
-	Parameter WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-637] synthesizing blackbox instance 'singleSecondsClock' of component 'downcounter' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd:115]
-	Parameter period bound to: 5 - type: integer 
-	Parameter WIDTH bound to: 3 - type: integer 
-INFO: [Synth 8-637] synthesizing blackbox instance 'tensSecondsClock' of component 'downcounter' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd:128]
-	Parameter period bound to: 9 - type: integer 
-	Parameter WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-637] synthesizing blackbox instance 'singleMinutesClock' of component 'downcounter' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd:141]
-	Parameter period bound to: 5 - type: integer 
-	Parameter WIDTH bound to: 3 - type: integer 
-INFO: [Synth 8-637] synthesizing blackbox instance 'tensMinutesClock' of component 'downcounter' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd:154]
-INFO: [Synth 8-256] done synthesizing module 'clock_divider' (3#1) [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/clock_divider1.vhd:20]
-INFO: [Synth 8-637] synthesizing blackbox instance 'STRIPES_DFF' of component 'vga_stripes_dff' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:293]
-INFO: [Synth 8-637] synthesizing blackbox instance 'BOX' of component 'bouncing_box' [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:303]
-INFO: [Synth 8-226] default block is never used [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:340]
-WARNING: [Synth 8-614] signal 'vga_select' is read in the process but is not in the sensitivity list [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:338]
-INFO: [Synth 8-256] done synthesizing module 'vga_module' (4#1) [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/vga_module.vhd:16]
----------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 346.754 ; gain = 116.090
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 346.754 ; gain = 116.090
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Loading Part and Timing Information
----------------------------------------------------------------------------------
-Loading part: xc7a35tcpg236-1
----------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 346.754 ; gain = 116.090
----------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-INFO: [Synth 8-5544] ROM "synch_debounced" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/up_down_counter.vhd:32]
-WARNING: [Synth 8-6014] Unused sequential element current_val_reg was removed.  [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/up_down_counter.vhd:30]
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 346.754 ; gain = 116.090
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
-No constraint files found.
----------------------------------------------------------------------------------
-Start RTL Component Statistics 
----------------------------------------------------------------------------------
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      9 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 16    
-+---Registers : 
-	                9 Bit    Registers := 1     
-	                4 Bit    Registers := 16    
-	                2 Bit    Registers := 16    
-	                1 Bit    Registers := 16    
-+---Muxes : 
-	   2 Input      4 Bit        Muxes := 22    
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 17    
----------------------------------------------------------------------------------
-Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Hierarchical Component Statistics 
----------------------------------------------------------------------------------
-Hierarchical RTL Component report 
-Module vga_module 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input      4 Bit        Muxes := 6     
-Module debouncer 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      4 Bit       Adders := 1     
-+---Registers : 
-	                4 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-Module up_down_counter 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      9 Bit       Adders := 1     
-+---Registers : 
-	                9 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
----------------------------------------------------------------------------------
-Finished RTL Hierarchical Component Statistics
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Part Resource Summary
----------------------------------------------------------------------------------
-Part Resources:
-DSPs: 90 (col length:60)
-BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
----------------------------------------------------------------------------------
-Finished Part Resource Summary
----------------------------------------------------------------------------------
-No constraint files found.
----------------------------------------------------------------------------------
-Start Cross Boundary and Area Optimization
----------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element CHANGE_BOX_SIZE/current_val_reg was removed.  [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/up_down_counter.vhd:30]
----------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 472.941 ; gain = 242.277
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
-No constraint files found.
----------------------------------------------------------------------------------
-Start Timing Optimization
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 472.941 ; gain = 242.277
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start Technology Mapping
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 482.645 ; gain = 251.980
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 482.645 ; gain = 251.980
----------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Start Renaming Generated Instances
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 482.645 ; gain = 251.980
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start Rebuilding User Hierarchy
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 482.645 ; gain = 251.980
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Ports
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 482.645 ; gain = 251.980
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 482.645 ; gain = 251.980
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Nets
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 482.645 ; gain = 251.980
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Writing Synthesis Report
----------------------------------------------------------------------------------
-
-Report BlackBoxes: 
-+------+-----------------------+----------+
-|      |BlackBox name          |Instances |
-+------+-----------------------+----------+
-|1     |sync_signals_generator |         1|
-|2     |vga_stripes_dff        |         1|
-|3     |bouncing_box           |         1|
-|4     |downcounter            |         9|
-+------+-----------------------+----------+
-
-Report Cell Usage: 
-+------+----------------------------+------+
-|      |Cell                        |Count |
-+------+----------------------------+------+
-|1     |bouncing_box_bbox           |     1|
-|2     |downcounter_bbox            |     1|
-|3     |downcounter_bbox_0          |     1|
-|4     |downcounter_bbox_1          |     1|
-|5     |downcounter_bbox_2          |     1|
-|6     |downcounter_bbox_3          |     1|
-|7     |downcounter_bbox_4          |     1|
-|8     |downcounter_bbox_5          |     1|
-|9     |downcounter_bbox_6          |     1|
-|10    |downcounter_bbox_7          |     1|
-|11    |sync_signals_generator_bbox |     1|
-|12    |vga_stripes_dff_bbox        |     1|
-|13    |BUFG                        |     1|
-|14    |CARRY4                      |     2|
-|15    |LUT1                        |    19|
-|16    |LUT2                        |    23|
-|17    |LUT3                        |    18|
-|18    |LUT4                        |    44|
-|19    |LUT6                        |    16|
-|20    |FDCE                        |     9|
-|21    |FDRE                        |   112|
-|22    |IBUF                        |    18|
-|23    |OBUF                        |    14|
-+------+----------------------------+------+
-
-Report Instance Areas: 
-+------+------------------+----------------+------+
-|      |Instance          |Module          |Cells |
-+------+------------------+----------------+------+
-|1     |top               |                |   379|
-|2     |  CHANGE_BOX_SIZE |up_down_counter |    21|
-|3     |  DEB_But1        |debouncer       |    14|
-|4     |  DEB_But2        |debouncer_0     |    13|
-|5     |  DEB_Sw0         |debouncer_1     |    13|
-|6     |  DEB_Sw1         |debouncer_2     |    25|
-|7     |  DEB_Sw10        |debouncer_3     |    13|
-|8     |  DEB_Sw11        |debouncer_4     |    13|
-|9     |  DEB_Sw12        |debouncer_5     |    13|
-|10    |  DEB_Sw13        |debouncer_6     |    13|
-|11    |  DEB_Sw2         |debouncer_7     |    13|
-|12    |  DEB_Sw3         |debouncer_8     |    13|
-|13    |  DEB_Sw4         |debouncer_9     |    13|
-|14    |  DEB_Sw5         |debouncer_10    |    13|
-|15    |  DEB_Sw6         |debouncer_11    |    13|
-|16    |  DEB_Sw7         |debouncer_12    |    13|
-|17    |  DEB_Sw8         |debouncer_13    |    13|
-|18    |  DEB_Sw9         |debouncer_14    |    13|
-|19    |  DIVIDER         |clock_divider   |    54|
-+------+------------------+----------------+------+
----------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 482.645 ; gain = 251.980
----------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 482.645 ; gain = 251.980
-Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 482.645 ; gain = 251.980
-INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-49 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 555.762 ; gain = 333.867
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.runs/synth_1/vga_module.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 555.762 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Oct 13 10:30:52 2017...
+INFO: Helper process launched with PID 15332 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 306.668 ; gain = 75.891
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2715] syntax error near if [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:126]
+ERROR: [Synth 8-2715] syntax error near pixel_color [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:130]
+ERROR: [Synth 8-2715] syntax error near else [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:131]
+ERROR: [Synth 8-2715] syntax error near if [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:133]
+ERROR: [Synth 8-2715] syntax error near not [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:147]
+ERROR: [Synth 8-2715] syntax error near ) [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:150]
+ERROR: [Synth 8-2715] syntax error near or [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:157]
+ERROR: [Synth 8-2715] syntax error near and [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:164]
+ERROR: [Synth 8-2715] syntax error near or [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:172]
+ERROR: [Synth 8-2715] syntax error near not [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:178]
+ERROR: [Synth 8-2715] syntax error near not [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:183]
+ERROR: [Synth 8-2715] syntax error near not [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:188]
+ERROR: [Synth 8-2715] syntax error near ) [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:191]
+ERROR: [Synth 8-2715] syntax error near else [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:193]
+ERROR: [Synth 8-2715] syntax error near if [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:195]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:21]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 347.000 ; gain = 116.223
+---------------------------------------------------------------------------------
+synthesize failed
+2 Infos, 0 Warnings, 0 Critical Warnings and 16 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 13 12:00:36 2017...

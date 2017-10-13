@@ -27,12 +27,14 @@ signal box_loc_x_max: std_logic_vector(9 downto 0); -- Not constants because the
 signal box_loc_y_max: std_logic_vector(9 downto 0);
 signal pixel_color: std_logic_vector(11 downto 0);
 signal box_loc_x, box_loc_y: std_logic_vector(9 downto 0);
+signal box2_loc_x, box2_loc_y: std_logic_vector(9 downto 0);
+signal box3_loc_x, box3_loc_y: std_logic_vector(9 downto 0);
 signal box_move_dir_x, box_move_dir_y: std_logic;
 
 
 constant G_x111, G_y12 :std_logic_vector(9 downto 0) :="0000000000";
 constant G_x39, G_y34 :std_logic_vector(9 downto 0) :="0000000001";
-constant G_x5 :std_logic_vector(9 downto 0) :="0000000010";
+constant G_x57 :std_logic_vector(9 downto 0) :="0000000010";
 constant G_x810 :std_logic_vector(9 downto 0) :="0000000011";
 constant G_x24612, G_y56 :std_logic_vector(9 downto 0) :="0000000100";
 constant  G_y78 :std_logic_vector(9 downto 0) :="0000000101";
@@ -55,11 +57,15 @@ constant D_x610 :std_logic_vector(9 downto 0) :="0000000100";
 constant D_y78910 :std_logic_vector(9 downto 0) :="0000000111";
 constant D_y1112 :std_logic_vector(9 downto 0) :="0000001000";
 
-
-
 constant gap: std_logic_vector(9 downto 0) :="0000000010";
 
+
 begin
+
+  box2_loc_x <= box_loc_x + G_x24612 + gap;
+  box2_loc_y <= box_loc_y;
+  box3_loc_x <= box2_loc_x + O_x28 + gap;
+  box3_loc_y <= box_loc_y;
 
 MoveBox: process(clk, reset)
 begin
@@ -116,16 +122,17 @@ end process MoveBox;
 SwitchType: process (clk)
 begin
 
-if (switch_type = '0')
-pixel_color <= box_color when   ((scan_line_x >= box_loc_x) and
+if (switch_type = '0') then
+     if   ((scan_line_x >= box_loc_x) and
 								                (scan_line_y >= box_loc_y) and
-								                (scan_line_x < box_loc_x+box_width) and
-								                (scan_line_y < box_loc_y+box_width))
-					                else
-				                "111111111111"; -- represents WHITE
-
+			      (scan_line_x < box_loc_x+box_width) and
+            (scan_line_y < box_loc_y+box_width)) then
+       pixel_color <= box_color;
+	   else
+      pixel_color <= "111111111111"; -- represents WHITE
+     end if;
 else
- pixel_color <= box_color when  ((scan_line_x >= box_loc_x) and
+       if ((((scan_line_x >= box_loc_x) and
  								                (scan_line_x <= box_loc_x + G_x24612 + box_width) and
  								                (scan_line_y >=box_loc_y) and
  								                (scan_line_y <= box_loc_y+ G_y1112 + box_width))
@@ -137,19 +144,23 @@ else
                               	 (scan_line_y >=box_loc_y +G_y34 + box_width) and
                               	 (scan_line_y <= box_loc_y+ G_y56 + box_width)))
 
+                            and
+
                              not (((scan_line_x >= box_loc_x+G_x39 + box_width) and
                                	 (scan_line_x <= box_loc_x + G_x57 + box_width) and
                                	 (scan_line_y >=box_loc_y +G_y56 + box_width) and
                                	 (scan_line_y <= box_loc_y+ G_y78 + box_width)))
 
+                            and
+
                              not (((scan_line_x >= box_loc_x+G_x39 + box_width) and
                                  (scan_line_x <= box_loc_x + G_x810 + box_width) and
                               	 (scan_line_y >=box_loc_y +G_y78 + box_width) and
-                               	 (scan_line_y <= box_loc_y+ G_y910 + box_width))) --Draws the G
+                               	 (scan_line_y <= box_loc_y+ G_y910 + box_width)))) --Draws the G
 
                             or
 
-                            ((scan_line_x >= box2_loc_x) and
+                            (((scan_line_x >= box2_loc_x) and
                             (scan_line_x <= box2_loc_x + O_x28 + box_width) and
                             (scan_line_y >=box2_loc_y) and
                             (scan_line_y <= box2_loc_y+ O_y78 + box_width))
@@ -159,37 +170,41 @@ else
                             not(((scan_line_x >= box2_loc_x + O_x35 + box_width) and
                               (scan_line_x <= box2_loc_x + O_x46 + box_width) and
                               (scan_line_y >=box2_loc_y + O_y34 + box_width) and
-                              (scan_line_y <= box2_loc_y+ O_y56 + box_width)) )  -- Draws the O
-
+                              (scan_line_y <= box2_loc_y+ O_y56 + box_width)) ))  -- Draws the O
 
                             or
-                              ((scan_line_x >= box3_loc_x) and
+
+                              (((scan_line_x >= box3_loc_x) and
                               (scan_line_x <= box3_loc_x + D_x610 + box_width) and
                               (scan_line_y >=box3_loc_y) and
                               (scan_line_y <= box2_loc_y+ D_y1112 + box_width))
+
+                            and
 
                             not(((scan_line_x >= box3_loc_x + D_x37 + box_width) and
                                (scan_line_x <= box3_loc_x + D_x48 + box_width) and
                                (scan_line_y >=box3_loc_y + D_y3456 + box_width) and
                                (scan_line_y <= box2_loc_y+ D_y78910 + box_width)))
 
+                            and
+
                             not(((scan_line_x >= box3_loc_x + D_x25912 + box_width) and
                                (scan_line_x <= box3_loc_x + D_x610 + box_width) and
                                (scan_line_y >=box3_loc_y + D_y12 + box_width) and
                                (scan_line_y <= box2_loc_y+ D_y3456 + box_width)))
 
+                            and
+
                             not(((scan_line_x >= box3_loc_x + D_x25912 + box_width) and
                                (scan_line_x <= box3_loc_x + D_x610 + box_width) and
                                (scan_line_y >=box3_loc_y + D_y78910 + box_width) and
-                               (scan_line_y <= box2_loc_y+ D_y1112 + box_width))) -- Draws the D
-                             else
-                               "111111111111";
+                               (scan_line_y <= box2_loc_y+ D_y1112 + box_width))))) then -- Draws the D
+               pixel_color <= box_color;
+            else
+               pixel_color <= "111111111111";
+            end if;
 end if;
 end process SwitchType;
-box2_loc_x <= box_loc_x + G_x24612 + gap;
-box2_loc_y <= box_loc_y;
-box3_loc_x <= box2_loc_x + O_x28 + gap;
-box3_loc_y <= box_loc_y;
 
 red   <= pixel_color(11 downto 8);
 green <= pixel_color(7 downto 4);

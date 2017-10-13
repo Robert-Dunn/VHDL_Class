@@ -17,6 +17,7 @@ architecture Behavioral of vga_module is
 -- Components:
 component sync_signals_generator is
     Port ( pixel_clk : in  STD_LOGIC;
+           clk : in STD_LOGIC;
            reset : in  STD_LOGIC;
            hor_sync: out STD_LOGIC;
            ver_sync: out STD_LOGIC;
@@ -64,6 +65,7 @@ end component;
 
 component vga_stripes_dff is
     Port ( pixel_clk : in  STD_LOGIC;
+           clk: in STD_LOGIC;
            reset : in  STD_LOGIC;
            next_pixel : in  STD_LOGIC;
 		   mode: in STD_LOGIC;

@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../../sync_signal_generator.vhd"
+vhdl xil_defaultlib  "../../../../tb_sync_signal_generator.vhd"
+
+# Do not sort compile order
+nosort
