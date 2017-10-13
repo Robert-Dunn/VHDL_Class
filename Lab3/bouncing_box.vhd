@@ -32,7 +32,7 @@ signal box_move_dir_x, box_move_dir_y: std_logic;
 
 constant G_x111, G_y12 :std_logic_vector(9 downto 0) :="0000000000";
 constant G_x39, G_y34 :std_logic_vector(9 downto 0) :="0000000001";
-constant G_x5, G_y78 :std_logic_vector(9 downto 0) :="0000000010";
+constant G_x5 :std_logic_vector(9 downto 0) :="0000000010";
 constant G_x810 :std_logic_vector(9 downto 0) :="0000000011";
 constant G_x24612, G_y56 :std_logic_vector(9 downto 0) :="0000000100";
 constant  G_y78 :std_logic_vector(9 downto 0) :="0000000101";
@@ -113,7 +113,7 @@ end process MoveBox;
 
 
 
-SwitchType: process (switch_type)
+SwitchType: process (clk)
 begin
 
 if (switch_type = '0')
@@ -182,8 +182,10 @@ else
                                (scan_line_x <= box3_loc_x + D_x610 + box_width) and
                                (scan_line_y >=box3_loc_y + D_y78910 + box_width) and
                                (scan_line_y <= box2_loc_y+ D_y1112 + box_width))) -- Draws the D
+                             else
+                               "111111111111";
 end if;
-
+end process SwitchType;
 box2_loc_x <= box_loc_x + G_x24612 + gap;
 box2_loc_y <= box_loc_y;
 box3_loc_x <= box2_loc_x + O_x28 + gap;
