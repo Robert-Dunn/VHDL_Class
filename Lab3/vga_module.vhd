@@ -100,7 +100,6 @@ signal disp_green: std_logic_vector(3 downto 0);
 signal switches_deb: std_logic_vector(13 downto 0);
 signal buttons_deb: std_logic_vector(1 downto 0); -- not debouncing reset
 
-
 -- Stripe block signals:
 signal show_stripe: std_logic;
 
@@ -128,6 +127,14 @@ signal stripe_blue: std_logic_vector(3 downto 0);
 
 begin
 
+DEB_Sw0: debouncer
+    Generic map( tenTimes => 10)
+    Port map(
+          clk => clk,
+          asynch_in => switches(0),
+          synch_debounced => switches_deb(0)
+    );
+
 VGA_SYNC: sync_signals_generator
     Port map( 	pixel_clk   => i_pixel_clk,
                 reset       => reset,
@@ -146,7 +153,7 @@ CHANGE_BOX_SIZE: up_down_counter
 					clk	   => clk,
 					reset  => reset,
 					enable => i_hHz,
-                    val    => box_size
+          val    => box_size
 	);
 
 -- ADDED
