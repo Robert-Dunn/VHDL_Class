@@ -1,4 +1,0 @@
-Running: xsim.dir/tb_sync_signal_generator_behav/xsimk.exe -simmode gui -wdb tb_sync_signal_generator_behav.wdb -simrunnum 0 -socket 53398
-Design successfully loaded
-Design Loading Memory Usage: 6484 KB (Peak: 6484 KB)
-Design Loading CPU Usage: 46 ms

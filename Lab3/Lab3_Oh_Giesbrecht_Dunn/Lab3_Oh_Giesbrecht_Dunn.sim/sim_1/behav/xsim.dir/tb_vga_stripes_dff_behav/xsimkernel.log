@@ -1,4 +1,0 @@
-Running: xsim.dir/tb_vga_stripes_dff_behav/xsimk.exe -simmode gui -wdb tb_vga_stripes_dff_behav.wdb -simrunnum 0 -socket 53316
-Design successfully loaded
-Design Loading Memory Usage: 6484 KB (Peak: 6484 KB)
-Design Loading CPU Usage: 0 ms

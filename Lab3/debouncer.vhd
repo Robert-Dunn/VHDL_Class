@@ -14,19 +14,19 @@ end debouncer;
 
 architecture behavioral of debouncer is
 signal synch_counter: natural range 0 to tenTimes-1;
-signal asynch: std_logic_vector(1 downto 0);
+signal asynch: std_logic_vector(1 downto 0):= "00";
+
 
 begin
 deb: process(clk)
 begin
 	if(rising_edge(clk)) then
 	    asynch <= asynch(0) & asynch_in;
-			if((asynch(0) and asynch(1)) = '1') then
+			if((asynch(0) = asynch(1))) then
 	        if(synch_counter = tenTimes-1) then
-	            synch_debounced <= '1';
+	            synch_debounced <= asynch(1);
 	            synch_counter <= 0;
 	        else
-	            synch_debounced <= '0';
 	            synch_counter <= synch_counter+1;
 	        end if;
 	    else

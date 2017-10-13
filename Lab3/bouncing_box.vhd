@@ -27,9 +27,11 @@ signal box_loc_x_max: std_logic_vector(9 downto 0); -- Not constants because the
 signal box_loc_y_max: std_logic_vector(9 downto 0);
 signal pixel_color: std_logic_vector(11 downto 0);
 signal box_loc_x, box_loc_y: std_logic_vector(9 downto 0);
+signal Letter_loc_x, Letter_loc_y: std_logic_vector(9 downto 0);
 signal box2_loc_x, box2_loc_y: std_logic_vector(9 downto 0);
 signal box3_loc_x, box3_loc_y: std_logic_vector(9 downto 0);
 signal box_move_dir_x, box_move_dir_y: std_logic;
+signal letter_move_dir_x, letter_move_dir_y: std_logic;
 signal initals_xmax, initals_ymax: std_logic_vector(9 downto 0);
 
 signal S1 : std_logic_vector (9 downto 0);
@@ -93,62 +95,61 @@ S8 <= M8 (9 downto 0);
 
 
 
-  box2_loc_x <= box_loc_x + S4 + gap;
-  box2_loc_y <= box_loc_y;
+  box2_loc_x <= Letter_loc_x + S4 + gap;
+  box2_loc_y <= Letter_loc_y;
   box3_loc_x <= box2_loc_x + S4 + gap;
-  box3_loc_y <= box_loc_y;
-  initals_xmax <= "1010000000"- ((box3_loc_x + S4) - box_loc_x);
-  initals_ymax <= "0111100000" - ((box3_loc_y + S4) - box_loc_y);
+  box3_loc_y <= Letter_loc_y;
+  initals_xmax <= "1010000000"- ((box3_loc_x + S4) - Letter_loc_x);
+  initals_ymax <= "0111100000" - ((box3_loc_y + S4) - Letter_loc_y);
 
-MoveLetters: process(clk, reset)
-begin
-    if (reset ='1') then
-        box_loc_x <= "0111000101";
-        box_loc_y <= "0001100010";
-        box_move_dir_x <= '0';
-        box_move_dir_y <= '0';
-        redraw <= (others=>'0');
-	elsif (rising_edge(clk)) then
-        if (kHz = '1') then
-            redraw <= redraw + 1;
-            if (redraw = "10000") then 		-- Determines the box's speed
-                redraw <= (others => '0');
-                if box_move_dir_x <= '0' then   -- Box moving right
-                    if (box_loc_x < initals_xmax) then -- Has not hit right wall
-                        box_loc_x <= box_loc_x + 1;
-                    else
-                        box_move_dir_x <= '1';	-- Box is now moving left
-                    end if;
-                else
-                    if (box_loc_x > box_loc_x_min) then
-                        box_loc_x <= box_loc_x - 1; -- Has not hit left wall
-                    else
-                        box_move_dir_x <= '0';	-- Box is now moving right
-                    end if;
-                end if;
+  MoveLetters: process(clk, reset)
+  begin
+      if (reset ='1') then
+          Letter_loc_x <= "0111000101";
+          Letter_loc_y <= "0001100010";
+          letter_move_dir_x <= '0';
+          letter_move_dir_y <= '0';
+          redraw <= (others=>'0');
+    elsif (rising_edge(clk)) then
+          if (kHz = '1') then
+              redraw <= redraw + 1;
+              if (redraw = "10000") then 		-- Determines the box's speed
+                  redraw <= (others => '0');
+                  if letter_move_dir_x <= '0' then   -- Box moving right
+                      if (Letter_loc_x < initals_xmax) then -- Has not hit right wall
+                          Letter_loc_x <= Letter_loc_x + 1;
+                      else
+                          letter_move_dir_x <= '1';	-- Box is now moving left
+                      end if;
+                  else
+                      if (Letter_loc_x > box_loc_x_min) then
+                          Letter_loc_x <= Letter_loc_x - 1; -- Has not hit left wall
+                      else
+                          letter_move_dir_x <= '0';	-- Box is now moving right
+                      end if;
+                  end if;
 
-                -- Complete the Y-axis motion description here
-                -- It is very similar to X-axis motion
-                -- ADDED
-                if box_move_dir_y <= '0' then   -- Box moving down
-                    if (box_loc_y < initals_ymax) then -- Has not hit bottom wall
-                        box_loc_y <= box_loc_y + 1;
-                    else
-                        box_move_dir_y <= '1';    -- Box is now moving up
-                    end if;
-                else
-                    if (box_loc_y > box_loc_y_min) then
-                        box_loc_y <= box_loc_y - 1; -- Has not hit top wall
-                    else
-                        box_move_dir_y <= '0';    -- Box is now moving down
-                    end if;
-                end if;
-                -- End ADDED
-            end if;
-        end if;
-	end if;
-end process MoveLetters;
-
+                  -- Complete the Y-axis motion description here
+                  -- It is very similar to X-axis motion
+                  -- ADDED
+                  if letter_move_dir_y <= '0' then   -- Box moving down
+                      if (Letter_loc_y < initals_ymax) then -- Has not hit bottom wall
+                          Letter_loc_y <= Letter_loc_y + 1;
+                      else
+                          letter_move_dir_y <= '1';    -- Box is now moving up
+                      end if;
+                  else
+                      if (Letter_loc_y > box_loc_y_min) then
+                          Letter_loc_y <= Letter_loc_y - 1; -- Has not hit top wall
+                      else
+                          letter_move_dir_y <= '0';    -- Box is now moving down
+                      end if;
+                  end if;
+                  -- End ADDED
+              end if;
+          end if;
+    end if;
+  end process MoveLetters;
 
 
 MoveBox: process(clk, reset)
@@ -203,7 +204,7 @@ end process MoveBox;
 
 
 
-SwitchType: process (switch_type,box_width,scan_line_x,scan_line_y, box_loc_x,box_loc_y,box_color,S1,S2,S3,S4,S5,S6,S7,S8)
+SwitchType: process (switch_type,box_width,scan_line_x,scan_line_y, box_loc_x,box_loc_y, Letter_loc_x, Letter_loc_y, box_color,S1,S2,S3,S4,S5,S6,S7,S8)
 begin
 
 if (switch_type = '0') then
@@ -216,77 +217,77 @@ if (switch_type = '0') then
       pixel_color <= "111111111111"; -- represents WHITE
      end if;
 else
-       if 	(	 ((((scan_line_x >= box_loc_x) and
- 				 (scan_line_x <= box_loc_x + S4) and
- 				 (scan_line_y >=box_loc_y) and
-				 (scan_line_y <= box_loc_y+ S8))
+  if 	(	 ((((scan_line_x >= Letter_loc_x) and
+    (scan_line_x <= Letter_loc_x + S4) and
+    (scan_line_y >=Letter_loc_y) and
+    (scan_line_y <= Letter_loc_y+ S8))
 
-                 and
+            and
 
-                 (not(((scan_line_x >= box_loc_x+S1  ) and
-                 (scan_line_x <= box_loc_x + S4  ) and
-                 (scan_line_y >=box_loc_y +S1  ) and
-                 (scan_line_y <= box_loc_y+ S4  ))))
+            (not(((scan_line_x >= Letter_loc_x+S1  ) and
+            (scan_line_x <= Letter_loc_x + S4  ) and
+            (scan_line_y >=Letter_loc_y +S1  ) and
+            (scan_line_y <= Letter_loc_y+ S4  ))))
 
-                 and
+            and
 
-                 (not(((scan_line_x >= box_loc_x+S1  ) and
-                 (scan_line_x <= box_loc_x + S2  ) and
-                 (scan_line_y >=box_loc_y +S4  ) and
-                 (scan_line_y <= box_loc_y+ S5 ))))
+            (not(((scan_line_x >= Letter_loc_x+S1  ) and
+            (scan_line_x <= Letter_loc_x + S2  ) and
+            (scan_line_y >=Letter_loc_y +S4  ) and
+            (scan_line_y <= Letter_loc_y+ S5 ))))
 
-                 and
+            and
 
-                 (not (((scan_line_x >= box_loc_x+S1  ) and
-                 (scan_line_x <= box_loc_x + S3  ) and
-                 (scan_line_y >=box_loc_y +S5  ) and
-                 (scan_line_y <= box_loc_y+ S6  )))))) --Draws the G
+            (not (((scan_line_x >= Letter_loc_x+S1  ) and
+            (scan_line_x <= Letter_loc_x + S3  ) and
+            (scan_line_y >=Letter_loc_y +S5  ) and
+            (scan_line_y <= Letter_loc_y+ S6  )))))) --Draws the G
 
-                 or
+            or
 
-                 ((((scan_line_x >= box2_loc_x) and
-                 (scan_line_x <= box2_loc_x + S4) and
-                 (scan_line_y >=box2_loc_y) and
-                 (scan_line_y <= box2_loc_y+ S8))
+            ((((scan_line_x >= box2_loc_x) and
+            (scan_line_x <= box2_loc_x + S4) and
+            (scan_line_y >=box2_loc_y) and
+            (scan_line_y <= box2_loc_y+ S8))
 
-                 and
+            and
 
-                 (not(((scan_line_x >= box2_loc_x + S1 ) and
-                 (scan_line_x <= box2_loc_x + S3 ) and
-                 (scan_line_y >=box2_loc_y + S2) and
-                 (scan_line_y <= box2_loc_y+ S6 ))))))  -- Draws the O
+            (not(((scan_line_x >= box2_loc_x + S1 ) and
+            (scan_line_x <= box2_loc_x + S3 ) and
+            (scan_line_y >=box2_loc_y + S2) and
+            (scan_line_y <= box2_loc_y+ S6 ))))))  -- Draws the O
 
-                  or
+             or
 
-                 ((((scan_line_x >= box3_loc_x) and
-                 (scan_line_x <= box3_loc_x + S4 ) and
-                 (scan_line_y >=box3_loc_y) and
-                 (scan_line_y <= box2_loc_y+ S8))
+            ((((scan_line_x >= box3_loc_x) and
+            (scan_line_x <= box3_loc_x + S4 ) and
+            (scan_line_y >=box3_loc_y) and
+            (scan_line_y <= box2_loc_y+ S8))
 
-                  and
+             and
 
-                  (not(((scan_line_x >= box3_loc_x + S1 ) and
-                  (scan_line_x <= box3_loc_x + S2 ) and
-                  (scan_line_y >=box3_loc_y + S1 ) and
-                  (scan_line_y <= box2_loc_y+ S7 ))))
+             (not(((scan_line_x >= box3_loc_x + S1 ) and
+             (scan_line_x <= box3_loc_x + S2 ) and
+             (scan_line_y >=box3_loc_y + S1 ) and
+             (scan_line_y <= box2_loc_y+ S7 ))))
 
-                  and
+             and
 
-                  (not(((scan_line_x >= box3_loc_x + S3 ) and
-                  (scan_line_x <= box3_loc_x + S4) and
-                  (scan_line_y >=box3_loc_y) and
-                  (scan_line_y <= box2_loc_y+ S1))))
+             (not(((scan_line_x >= box3_loc_x + S3 ) and
+             (scan_line_x <= box3_loc_x + S4) and
+             (scan_line_y >=box3_loc_y) and
+             (scan_line_y <= box2_loc_y+ S1))))
 
-                  and
+             and
 
-                  (not(((scan_line_x >= box3_loc_x + S3) and
-                  (scan_line_x <= box3_loc_x + S4) and
-                  (scan_line_y >=box3_loc_y + S7) and
-                  (scan_line_y <= box2_loc_y+ S8))))))) then -- Draws the D
-               pixel_color <= box_color;
-            else
-               pixel_color <= "111111111111";
-            end if;
+             (not(((scan_line_x >= box3_loc_x + S3) and
+             (scan_line_x <= box3_loc_x + S4) and
+             (scan_line_y >=box3_loc_y + S7) and
+             (scan_line_y <= box2_loc_y+ S8))))))) then -- Draws the D
+          pixel_color <= box_color;
+       else
+          pixel_color <= "111111111111";
+       end if;
 end if;
 end process SwitchType;
 
