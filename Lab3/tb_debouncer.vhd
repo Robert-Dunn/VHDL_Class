@@ -1,21 +1,21 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
+-- Company:
+-- Engineer:
+--
 -- Create Date: 02/10/2017 06:25:33 AM
--- Design Name: 
+-- Design Name:
 -- Module Name: tb_debouncer - behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Project Name:
+-- Target Devices:
+-- Tool Versions:
+-- Description:
+--
+-- Dependencies:
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+--
 ----------------------------------------------------------------------------------
 
 
@@ -39,8 +39,8 @@ architecture behavioral of tb_debouncer is
 component debouncer is
     generic(mtimes: natural := 10);
     port ( clk : in STD_LOGIC;
-           x : in STD_LOGIC;
-           y : out STD_LOGIC);
+           asynch_in : in STD_LOGIC;
+           synch_debounced : out STD_LOGIC);
 end component;
 constant mtimes: natural := 10;
 constant clk_period: time:= 10 ns;
@@ -49,9 +49,9 @@ begin
 uut: debouncer
     generic map(mtimes => mtimes)
     port map ( clk => sclk,
-               x => sx,
-               y => sy);
-               
+               asynch_in => sx,
+               synch_debounced => sy);
+
 deb: process
 begin
     sx <= '1';
@@ -64,7 +64,7 @@ begin
     wait for 7*clk_period;
     sx <= '0';
     wait for clk_period;
-    
+
 end process;
 
 clk_process: process
