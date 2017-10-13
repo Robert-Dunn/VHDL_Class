@@ -140,3 +140,8 @@ set_property source_mgmt_mode All [current_project]
 update_compile_order -fileset sources_1
 update_compile_order -fileset sim_1
 launch_simulation
+launch_simulation
+launch_simulation
+source tb_sync_signal_generator.tcl
+restart
+run 30 ms
