@@ -6,6 +6,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity sync_signals_generator is
     Port ( pixel_clk : in  STD_LOGIC;
+           clk : in STD_LOGIC;
            reset : in  STD_LOGIC;
            hor_sync: out STD_LOGIC;
            ver_sync: out STD_LOGIC;

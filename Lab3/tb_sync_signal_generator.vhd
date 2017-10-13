@@ -7,9 +7,10 @@ end tb_sync_signal_generator;
 architecture behaviour of tb_sync_signal_generator is
 
     -- Component Declaration for the Unit Under Test (UUT)
- 
+
     COMPONENT sync_signals_generator
      Port ( pixel_clk : in  STD_LOGIC;
+            clk: in STD_LOGIC;
             reset : in  STD_LOGIC;
             hor_sync: out STD_LOGIC;
             ver_sync: out STD_LOGIC;
@@ -18,9 +19,10 @@ architecture behaviour of tb_sync_signal_generator is
             scan_line_y: out STD_LOGIC_VECTOR(10 downto 0)
           );
     END COMPONENT;
-    
+
     --Inputs
     signal pixel_clk : std_logic;
+    signal clk : std_logic;
     signal reset : std_logic;
 
 	--Outputs
@@ -30,11 +32,12 @@ architecture behaviour of tb_sync_signal_generator is
     signal scan_line_x: STD_LOGIC_VECTOR(10 downto 0);
     signal scan_line_y: STD_LOGIC_VECTOR(10 downto 0);
 
-   -- Clock period definitions
-   constant clk_period : time := 10 ns;
- 
+    -- Clock period definitions
+    constant clk_period : time := 10 ns;
+    constant pix_clk_period : time := 40 ns;
+
 BEGIN
- 
+
 	-- Instantiate the Unit Under Test (UUT)
    uut: sync_signals_generator PORT MAP (
           pixel_clk => pixel_clk,
@@ -46,21 +49,29 @@ BEGIN
           scan_line_y => scan_line_y
         );
 
-   -- Clock process
-   ClkProcess :process
+    --  Clock process
+    ClkProcess :process
+    begin
+ 		clk <= '0';
+ 		wait for clk_period/2;
+ 		clk <= '1';
+ 		wait for clk_period/2;
+    end process;
+
+   -- Pixel Clock process
+   PixClkProcess :process
    begin
 		pixel_clk <= '0';
-		wait for clk_period/2;
+		wait for pix_clk_period/2;
 		pixel_clk <= '1';
-		wait for clk_period/2;
-   end process; 
-
+		wait for pix_clk_period/2;
+   end process;
    -- Reset process
    ResetProcess: process
-   begin		
+   begin
       -- hold reset state for 100 ns.
 		reset <= '1';
-      wait for 100 ns;	
+      wait for 100 ns;
 		reset <= '0';
       wait;
    end process;

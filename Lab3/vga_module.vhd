@@ -259,6 +259,7 @@ DEB_But2: debouncer
 
 VGA_SYNC: sync_signals_generator
     Port map( 	pixel_clk   => i_pixel_clk,
+                clk         => clk,
                 reset       => reset,
                 hor_sync    => hsync,
                 ver_sync    => vsync,
@@ -293,7 +294,8 @@ DIVIDER: clock_divider
 		  );
 
 STRIPES_DFF: vga_stripes_dff
-	Port map ( pixel_clk  => i_pixel_clk,
+	Port map (   pixel_clk  => i_pixel_clk,
+               clk        => clk,
                reset      => reset,
                next_pixel => show_stripe,
                mode       => switches_deb(0), -- can be a different switch

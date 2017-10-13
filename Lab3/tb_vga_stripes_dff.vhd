@@ -50,7 +50,7 @@ BEGIN
           R => R
         );
 
-    -- Pixel Clock process
+    --  Clock process
     ClkProcess :process
     begin
  		clk <= '0';
