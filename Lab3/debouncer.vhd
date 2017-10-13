@@ -3,14 +3,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-entity debouncer_new is
+entity debouncer is
 	generic(tenTimes: natural := 10);
 	Port (
 		asynch_in: in STD_LOGIC;
 		clk: in std_logic;
         synch_debounced: out std_logic
 	);
-end debouncer_new;
+end debouncer;
 
 architecture behavioral of debouncer is
 signal scounter: natural range 0 to tenTimes-1;

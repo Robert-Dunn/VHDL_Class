@@ -26,6 +26,15 @@ component sync_signals_generator is
 		  );
 end component;
 
+component debouncer is
+  generic(tenTimes: natural := 10);
+  Port (
+    asynch_in: in STD_LOGIC;
+    clk: in std_logic;
+        synch_debounced: out std_logic
+  );
+end component;
+
 component up_down_counter is
 	Generic ( WIDTH: integer:= 6);
 	Port (
@@ -43,7 +52,7 @@ component clock_divider is
 Port (  clk : in  STD_LOGIC;
         reset : in  STD_LOGIC;
         enable: in STD_LOGIC;
-        kHz: out STD_LOGIC;	  
+        kHz: out STD_LOGIC;
         seconds_port: out STD_LOGIC_VECTOR(4-1 downto 0);     -- unused
         ten_seconds_port: out STD_LOGIC_VECTOR(3-1 downto 0); -- unused
         minutes_port: out STD_LOGIC_VECTOR(4-1 downto 0);     -- unused
@@ -63,7 +72,7 @@ component vga_stripes_dff is
            R : out  STD_LOGIC_VECTOR (3 downto 0)
          );
  end component;
- 
+
  component bouncing_box is
  Port (  clk : in  STD_LOGIC;
          reset : in  STD_LOGIC;
@@ -135,7 +144,7 @@ CHANGE_BOX_SIZE: up_down_counter
                     val    => box_size
 	);
 
--- ADDED	
+-- ADDED
 DIVIDER: clock_divider
     Port map (  clk              => clk,
                 reset            => reset,
@@ -148,7 +157,7 @@ DIVIDER: clock_divider
                 ten_minutes_port => open,
                 hHz              => i_hHz
 		  );
-		  
+
 STRIPES_DFF: vga_stripes_dff
 	Port map ( pixel_clk  => i_pixel_clk,
                reset      => reset,
@@ -158,7 +167,7 @@ STRIPES_DFF: vga_stripes_dff
                G          => stripe_green,
                R          => stripe_red
              );
-             
+
 BOX: bouncing_box
     Port map ( clk         => clk,
                reset       => reset,
@@ -207,4 +216,3 @@ end process selectOutput;
 -----------------------------------------------------------------------------
 
 end Behavioral;
-
