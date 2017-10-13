@@ -1913,3 +1913,124 @@ restart
 INFO: [Simtcl 6-17] Simulation restarted
 run 30 ms
 run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 920.723 ; gain = 0.000
+set_property top tb_bouncing_box [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+set_property top bouncing_box [current_fileset]
+update_compile_order -fileset sources_1
+current_sim simulation_12
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_bouncing_box_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_clock_divider_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_sync_signal_generator_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_up_down_counter_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_vga_module_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_vga_stripes_dff_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bouncing_box' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj tb_bouncing_box_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity bouncing_box
+ERROR: [VRFC 10-1412] syntax error near initals_ymax [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:101]
+ERROR: [VRFC 10-1412] syntax error near elsif [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:111]
+ERROR: [VRFC 10-1412] syntax error near then [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:112]
+ERROR: [VRFC 10-1412] syntax error near if [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:114]
+ERROR: [VRFC 10-1412] syntax error near if [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:116]
+ERROR: [VRFC 10-1412] syntax error near if [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:121]
+ERROR: [VRFC 10-1412] syntax error near then [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:123]
+ERROR: [VRFC 10-1412] syntax error near else [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:125]
+ERROR: [VRFC 10-1412] syntax error near if [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:127]
+ERROR: [VRFC 10-1412] syntax error near then [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:133]
+ERROR: [VRFC 10-1412] syntax error near if [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:138]
+ERROR: [VRFC 10-1412] syntax error near then [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:140]
+ERROR: [VRFC 10-1412] syntax error near else [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:142]
+ERROR: [VRFC 10-1412] syntax error near if [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:144]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd:21]
+INFO: [VRFC 10-240] VHDL file C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd ignored due to errors
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_bouncing_box
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+current_sim simulation_9
+launch_simulation
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_bouncing_box_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_clock_divider_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_sync_signal_generator_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_up_down_counter_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_vga_module_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/tb_vga_stripes_dff_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav/xelab.pb
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bouncing_box' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj tb_bouncing_box_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity bouncing_box
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/tb_bouncing_box.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_bouncing_box
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 00e315f3c04e4c0e933e8595547c4992 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_bouncing_box_behav xil_defaultlib.tb_bouncing_box -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.bouncing_box [bouncing_box_default]
+Compiling architecture behavior of entity xil_defaultlib.tb_bouncing_box
+Built simulation snapshot tb_bouncing_box_behav
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Rob -notrace
+couldn't read file "C:/Users/Rob": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 13 15:11:04 2017...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab3/Lab3_Oh_Giesbrecht_Dunn/Lab3_Oh_Giesbrecht_Dunn.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bouncing_box_behav -key {Behavioral:sim_1:Functional:tb_bouncing_box} -tclbatch {tb_bouncing_box.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source tb_bouncing_box.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bouncing_box_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 920.723 ; gain = 0.000
