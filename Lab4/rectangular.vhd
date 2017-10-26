@@ -9,7 +9,7 @@ entity PWM is
 		 reset: in std_logic;
 		 amplitude: in STD_LOGIC_VECTOR(7 downto 0);
 		 square_frequency: in STD_LOGIC_VECTOR(2 downto 0);
-		 PWM_out: out STD_LOGIC;
+		 PWM_out: out STD_LOGIC
 
 	);
 end PWM;
