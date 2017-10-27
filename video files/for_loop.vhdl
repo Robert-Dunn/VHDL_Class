@@ -2,6 +2,7 @@ entity parity is
 port (DATA: in std_logic_vector(3 downto 0);
       ODD : std_logic);
 end parity;
+
 architecture RTL of parity is
   shared variable global; integer := 0;
   begin

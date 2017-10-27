@@ -31,8 +31,6 @@ begin
           Y_Curr <= A;
         elsif rising_edge(CLK) then
           Y_Curr <= Y_Next;
-        end if
+        end if;
       end process;
-  Z <= '1' when (Y = B and W = 1)
-  else Z <= '0';
 end Behavioral;
