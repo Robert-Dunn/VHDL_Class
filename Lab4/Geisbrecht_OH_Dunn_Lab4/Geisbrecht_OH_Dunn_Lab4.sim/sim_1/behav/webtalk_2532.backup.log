@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Oct 26 19:36:33 2017
+# Process ID: 2532
+# Current directory: C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab4/Geisbrecht_OH_Dunn_Lab4/Geisbrecht_OH_Dunn_Lab4.sim/sim_1/behav
+# Command line: wbtcv.exe -mode batch -source C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab4/Geisbrecht_OH_Dunn_Lab4/Geisbrecht_OH_Dunn_Lab4.sim/sim_1/behav/xsim.dir/clock_divider_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab4/Geisbrecht_OH_Dunn_Lab4/Geisbrecht_OH_Dunn_Lab4.sim/sim_1/behav/webtalk.log
+# Journal file: C:/Users/Rob Dunn/Documents/School/ENEL 453/VHDL_Class/Lab4/Geisbrecht_OH_Dunn_Lab4/Geisbrecht_OH_Dunn_Lab4.sim/sim_1/behav\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/Rob -notrace
+couldn't read file "C:/Users/Rob": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Thu Oct 26 19:36:33 2017...

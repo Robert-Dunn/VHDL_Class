@@ -2,19 +2,20 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity clock_divider is
-    generic (N_250k : natural := 400);
-    generic (N_125k : natural := 800);
-    generic (N_25k : natural := 4000);
-    generic (N_12p5k : natural := 8000);
-    generic (N_2p5k : natural := 40000);
-    generic (N_250hz : natural := 400000);
+    generic (N_250k : natural := 400;
+             N_125k : natural := 800;
+             N_25k : natural := 4000;
+             N_12p5k : natural := 8000;
+             N_2p5k : natural := 40000;
+             N_250hz : natural := 400000
+             );
     port(   CLK, RST: in std_logic;
             CLK_250k: out std_logic;
             CLK_125k: out std_logic;
-            CLK_25k out std_logic;
-            CLK_12p5k out std_logic;
-            CLK_2p5k out  std_logic;
-            CLK_250hz out std_logic
+            CLK_25k: out std_logic;
+            CLK_12p5k: out std_logic;
+            CLK_2p5k: out  std_logic;
+            CLK_250hz: out std_logic
             );
 end clock_divider;
 
@@ -32,7 +33,7 @@ architecture Behavioral of clock_divider is
     signal COUNT_2p5k: std_logic_vector(15 downto 0);
     signal COUNT_250hz: std_logic_vector(18 downto 0);
   begin
-    CLK_250k: process(CLK, RST)
+    CLK_250k_proc: process(CLK, RST)
       begin
           if rising_edge(CLK) then
               if RST = '1' then
@@ -48,10 +49,10 @@ architecture Behavioral of clock_divider is
                   end if;
               end if;
           end if;
-      end process CLK_250k;
+      end process CLK_250k_proc;
     CLK_250k <= CLK_DIV_250k;
 
-    CLK_125k: process(CLK, RST)
+    CLK_125k_proc: process(CLK, RST)
       begin
           if rising_edge(CLK) then
               if RST = '1' then
@@ -67,10 +68,10 @@ architecture Behavioral of clock_divider is
                   end if;
               end if;
           end if;
-      end process CLK_125k;
+      end process CLK_125k_proc;
     CLK_125k <= CLK_DIV_125k;
 
-    CLK_25k: process(CLK, RST)
+    CLK_25k_proc: process(CLK, RST)
       begin
           if rising_edge(CLK) then
               if RST = '1' then
@@ -86,10 +87,10 @@ architecture Behavioral of clock_divider is
                   end if;
               end if;
           end if;
-      end process CLK_25k;
+      end process CLK_25k_proc;
     CLK_25k <= CLK_DIV_25k;
 
-    CLK_12p5k: process(CLK, RST)
+    CLK_12p5k_proc: process(CLK, RST)
       begin
           if rising_edge(CLK) then
               if RST = '1' then
@@ -105,10 +106,10 @@ architecture Behavioral of clock_divider is
                   end if;
               end if;
           end if;
-      end process CLK_12p5k;
+      end process CLK_12p5k_proc;
     CLK_12p5k <= CLK_DIV_12p5k;
 
-    CLK_2p5k: process(CLK, RST)
+    CLK_2p5k_proc: process(CLK, RST)
       begin
           if rising_edge(CLK) then
               if RST = '1' then
@@ -124,10 +125,10 @@ architecture Behavioral of clock_divider is
                   end if;
               end if;
           end if;
-      end process CLK_2p5k;
+      end process CLK_2p5k_proc;
     CLK_2p5k <= CLK_DIV_2p5k;
 
-    CLK_250hz: process(CLK, RST)
+    CLK_250hz_proc: process(CLK, RST)
       begin
           if rising_edge(CLK) then
               if RST = '1' then
@@ -143,6 +144,6 @@ architecture Behavioral of clock_divider is
                   end if;
               end if;
           end if;
-      end process CLK_250hz;
+      end process CLK_250hz_proc;
     CLK_250hz <= CLK_DIV_250hz;
 end Behavioral;

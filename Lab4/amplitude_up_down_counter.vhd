@@ -20,7 +20,7 @@ constant max : std_logic_vector (7 downto 0):= "11111001";
 constant min : std_logic_vector (7 downto 0):= "00000000";
 
 -- Create a logic vector of proper length filled with zeros (also done during synthesis)
-constant zeros: 			std_logic_vector(WIDTH-1 downto 0) := (others => '0');
+constant zeros: std_logic_vector(7 downto 0) := (others => '0');
 
 begin
 	Count: process(clk, reset)
