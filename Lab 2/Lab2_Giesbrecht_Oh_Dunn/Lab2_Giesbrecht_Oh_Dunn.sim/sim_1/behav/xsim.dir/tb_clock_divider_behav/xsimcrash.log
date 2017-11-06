@@ -1,8 +1,0 @@
-Unable to capture context for thread 344 in process 8324, can not generate back trace
-Unable to capture context for thread 2076 in process 8324, can not generate back trace
-Exception at PC 0x00007FF9EB60BB93
-Printing stacktrace...
-
-Exception at PC 0x00007FF9EB311A52
-Attemped to write at address 0x00007FF9F8EAABA4
-Another exception occurred while writing back trace, hence exiting

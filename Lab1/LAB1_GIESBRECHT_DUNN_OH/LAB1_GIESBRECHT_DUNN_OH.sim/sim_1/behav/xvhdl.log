@@ -1,4 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/Lab1/LAB1_GIESBRECHT_DUNN_OH/Switch_logic.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity Switch_logic
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rob Dunn/Documents/School/ENEL 453/Lab1/LAB1_GIESBRECHT_DUNN_OH/LAB1_GIESBRECHT_DUNN_OH.srcs/sim_1/new/tb_sequential_logic.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity tb_sequential_logic

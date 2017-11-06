@@ -1,6 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  "../../../Switch_logic.vhd"
-vhdl xil_defaultlib  "../../../LAB1_GIESBRECHT_DUNN_OH.srcs/sim_1/new/tb_sequential_logic.vhd"
-
-# Do not sort compile order
-nosort

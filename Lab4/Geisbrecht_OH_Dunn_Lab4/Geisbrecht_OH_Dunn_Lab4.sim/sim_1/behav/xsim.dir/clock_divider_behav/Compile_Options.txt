@@ -1,1 +1,0 @@
--wto "317363e0b2b04bd589e31380fc1f5318" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "clock_divider_behav" "xil_defaultlib.clock_divider" -log "elaborate.log" 
