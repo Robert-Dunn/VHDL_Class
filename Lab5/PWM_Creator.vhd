@@ -53,15 +53,7 @@ begin
 					if (amplitude_count < max_value) then -- restart pwm cycle
 						amplitude_count <= amplitude_count + '1';
 					elsif (amplitude_count >= max_value) then
-															amplitude_count <= amp_zeros;
-
-															if(count_maxs_sawtooth > sawtooth_frequency) then
-															  count_maxs_sawtooth <= freq_zeros;
-															else
-															  count_maxs_sawtooth <= count_maxs_sawtooth + 1;
-															end if;
-															-- end sawtooth part
-
+						amplitude_count <= amp_zeros;
 					end if;
 		end if;
 end process Internal_PWM;
