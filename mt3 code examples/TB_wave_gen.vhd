@@ -1,6 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use IEEE.STD_LOGIC_ARITH.ALL;
 
 entity TB_wave_gen is
 end TB_wave_gen;
