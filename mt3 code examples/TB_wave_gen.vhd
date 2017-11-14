@@ -20,8 +20,8 @@ architecture Behavioral of TB_wave_gen is
       signal clk_1kHz_pulse : STD_LOGIC;
       signal PWM_OUT : STD_LOGIC;
     constant ClkPeriod : time := 10 ns;
-    constant N_1k : natural := 100000;
-    signal COUNT_1k : std_logic_vector(16 downto 0);
+    constant N_1k : std_logic_vector(16 downto 0) := "11000011010100000"; -- 100 thousand
+    signal COUNT_1k : std_logic_vector(16 downto 0) := "00000000000000000";
 
 begin
       UUT: clock_divider
