@@ -46,7 +46,7 @@ begin
                 COUNT_1k <= (others => '0');
                 clk_1kHz_pulse <= '0';
             else
-                COUNT_1k <= COUNT_1k +1;
+                COUNT_1k <= COUNT_1k + 1;
                 if COUNT_1k = N_1k -1 then
                     COUNT_1k <= (others => '0');
                     clk_1kHz_pulse <= '1';
