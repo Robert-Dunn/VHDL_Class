@@ -39,6 +39,23 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
+DocumentPath=..\..\..\..\..\Solar\AltiumLibraries\Diodes\Schematic Libraries\ON Semi Schottky Diode.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=YWXTDROM
+
+[Document2]
 DocumentPath=NMOS.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -55,7 +72,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=VVUXTFHT
 
-[Document2]
+[Document3]
 DocumentPath=RES.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -72,7 +89,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XJJRUQWW
 
-[Document3]
+[Document4]
 DocumentPath=CAP.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -89,7 +106,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=QRBVROYT
 
-[Document4]
+[Document5]
 DocumentPath=ADC_part1.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -106,7 +123,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=EHBQSPOK
 
-[Document5]
+[Document6]
 DocumentPath=Op_Amp.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -123,7 +140,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HPMFWMGH
 
-[Document6]
+[Document7]
 DocumentPath=8_in_NAND.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -140,7 +157,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=GSMNFIJK
 
-[Document7]
+[Document8]
 DocumentPath=ADC_part2.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -157,7 +174,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XHBEUNBN
 
-[Document8]
+[Document9]
 DocumentPath=ADC_part3.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -174,7 +191,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XTUSGJLL
 
-[Document9]
+[Document10]
 DocumentPath=4_in_or.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -191,7 +208,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=OQLMSLQU
 
-[Document10]
+[Document11]
 DocumentPath=2_in_or.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
