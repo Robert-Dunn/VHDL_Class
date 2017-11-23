@@ -1,17 +1,19 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity vga_module is
+entity SAR_module is
     Port (  clk : in  STD_LOGIC;
-            buttons: in STD_LOGIC_VECTOR(2 downto 0);
-            switches: in STD_LOGIC_VECTOR(14 downto 0);
-            red: out STD_LOGIC_VECTOR(3 downto 0);
-            green: out STD_LOGIC_VECTOR(3 downto 0);
-            blue: out STD_LOGIC_VECTOR(3 downto 0);
-            hsync: out STD_LOGIC;
-            vsync: out STD_LOGIC
+            switches: in STD_LOGIC_VECTOR(1 downto 0);
+            reset_button: in STD_LOGIC;
+            Compare: in STD_LOGIC;
+            -- for subranging
+            --Top_eight: in STD_LOGIC_VECTOR(7 downto 0);
+            --Bottom_eight: in STD_LOGIC_VECTOR(7 downto 0);
+            --MSB: out STD_LOGIC_VECTOR(2 downto 0);
+
+
 	 );
-end vga_module;
+end SAR_module;
 
 architecture Behavioral of vga_module is
 -- Components:
