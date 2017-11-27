@@ -1,0 +1,337 @@
+
+*** Running vivado
+    with args -log SUB_RANGING_TOP_MODULE.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source SUB_RANGING_TOP_MODULE.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source SUB_RANGING_TOP_MODULE.tcl -notrace
+Command: synth_design -top SUB_RANGING_TOP_MODULE -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8936 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 308.805 ; gain = 77.781
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'SUB_RANGING_TOP_MODULE' [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/SUB_RANGING_TOP_MODULE.vhd:20]
+INFO: [Synth 8-3491] module 'clock_divider' declared at '//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/Clock_divider_50hz.vhd:4' bound to instance 'CLOCK_DIV' of component 'clock_divider' [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/SUB_RANGING_TOP_MODULE.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'clock_divider' [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/Clock_divider_50hz.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'clock_divider' (1#1) [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/Clock_divider_50hz.vhd:10]
+INFO: [Synth 8-3491] module 'MSB_Encoder' declared at '//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/MSB_1.vhd:6' bound to instance 'MSB_E' of component 'MSB_Encoder' [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/SUB_RANGING_TOP_MODULE.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'MSB_Encoder' [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/MSB_1.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'MSB_Encoder' (2#1) [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/MSB_1.vhd:17]
+INFO: [Synth 8-3491] module 'LSB_Encoder' declared at '//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/LSB_1.vhd:6' bound to instance 'LSB_E' of component 'LSB_Encoder' [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/SUB_RANGING_TOP_MODULE.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'LSB_Encoder' [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/LSB_1.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'LSB_Encoder' (3#1) [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/LSB_1.vhd:16]
+INFO: [Synth 8-3491] module 'Adder' declared at '//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/Adder.vhd:6' bound to instance 'ADDER_I' of component 'Adder' [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/SUB_RANGING_TOP_MODULE.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'Adder' [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/Adder.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'Adder' (4#1) [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/Adder.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'SUB_RANGING_TOP_MODULE' (5#1) [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/SUB_RANGING_TOP_MODULE.vhd:20]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:33 . Memory (MB): peak = 348.133 ; gain = 117.109
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:33 . Memory (MB): peak = 348.133 ; gain = 117.109
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/Subranging.xdc]
+Finished Parsing XDC File [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/Subranging.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/Subranging.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/SUB_RANGING_TOP_MODULE_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/SUB_RANGING_TOP_MODULE_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+write_xdc: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 645.434 ; gain = 0.000
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:04 . Memory (MB): peak = 649.461 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:01:50 . Memory (MB): peak = 649.461 ; gain = 418.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:01:50 . Memory (MB): peak = 649.461 ; gain = 418.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:01:50 . Memory (MB): peak = 649.461 ; gain = 418.438
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element COUNT_50hz_reg was removed.  [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/Clock_divider_50hz.vhd:21]
+WARNING: [Synth 8-6014] Unused sequential element Count_5us_Delay_reg was removed.  [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/LSB_1.vhd:31]
+WARNING: [Synth 8-6014] Unused sequential element Count_Oh1_Delay_reg was removed.  [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/Adder.vhd:32]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:01:50 . Memory (MB): peak = 649.461 ; gain = 418.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   8 Input      3 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module clock_divider 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module MSB_Encoder 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   8 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+Module LSB_Encoder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   8 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+Module Adder 
+Detailed RTL Component Info : 
++---Registers : 
+	                6 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element ADDER_I/Six_Bits_i_reg was removed.  [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/Adder.vhd:29]
+WARNING: [Synth 8-6014] Unused sequential element CLOCK_DIV/COUNT_50hz_reg was removed.  [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/Clock_divider_50hz.vhd:21]
+WARNING: [Synth 8-6014] Unused sequential element LSB_E/Count_5us_Delay_reg was removed.  [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/LSB_1.vhd:31]
+WARNING: [Synth 8-6014] Unused sequential element ADDER_I/Count_Oh1_Delay_reg was removed.  [//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/Adder.vhd:32]
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[0]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[1]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[2]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[3]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[4]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[5]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[6]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[7]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[8]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[9]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[10]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[11]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[12]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[13]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[14]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[15]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[16]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[17]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[18]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+WARNING: [Synth 8-3332] Sequential element (ADDER_I/Count_Oh1_Delay_reg[19]) is unused and will be removed from module SUB_RANGING_TOP_MODULE.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:01:55 . Memory (MB): peak = 649.461 ; gain = 418.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:02:07 . Memory (MB): peak = 649.461 ; gain = 418.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:02:07 . Memory (MB): peak = 649.461 ; gain = 418.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:02:07 . Memory (MB): peak = 649.461 ; gain = 418.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:02:08 . Memory (MB): peak = 649.461 ; gain = 418.438
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:02:08 . Memory (MB): peak = 649.461 ; gain = 418.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:02:08 . Memory (MB): peak = 649.461 ; gain = 418.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:02:08 . Memory (MB): peak = 649.461 ; gain = 418.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:02:08 . Memory (MB): peak = 649.461 ; gain = 418.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:02:08 . Memory (MB): peak = 649.461 ; gain = 418.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     6|
+|3     |LUT1   |    23|
+|4     |LUT2   |     3|
+|5     |LUT3   |     4|
+|6     |LUT4   |     7|
+|7     |LUT5   |     8|
+|8     |LUT6   |    10|
+|9     |FDCE   |     6|
+|10    |FDRE   |    32|
+|11    |IBUF   |    18|
+|12    |OBUF   |    17|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------+--------------+------+
+|      |Instance    |Module        |Cells |
++------+------------+--------------+------+
+|1     |top         |              |   135|
+|2     |  CLOCK_DIV |clock_divider |    58|
+|3     |  LSB_E     |LSB_Encoder   |    32|
+|4     |  MSB_E     |MSB_Encoder   |     9|
++------+------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:02:08 . Memory (MB): peak = 649.461 ; gain = 418.438
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 27 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:01:19 . Memory (MB): peak = 649.461 ; gain = 117.109
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:02:08 . Memory (MB): peak = 649.461 ; gain = 418.438
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+25 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:02:13 . Memory (MB): peak = 649.461 ; gain = 426.203
+INFO: [Common 17-1381] The checkpoint 'F:/LAB 5/Sub_ranging/Sub_ranging.runs/synth_1/SUB_RANGING_TOP_MODULE.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:00 ; elapsed = 00:00:20 . Memory (MB): peak = 649.461 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 649.461 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 26 20:22:26 2017...

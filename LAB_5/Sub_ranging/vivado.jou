@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Nov 27 12:08:04 2017
+# Process ID: 3140
+# Current directory: F:/LAB 5/Sub_ranging
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5856 F:\LAB 5\Sub_ranging\Sub_ranging.xpr
+# Log file: F:/LAB 5/Sub_ranging/vivado.log
+# Journal file: F:/LAB 5/Sub_ranging\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {F:/LAB 5/Sub_ranging/Sub_ranging.xpr}
+update_compile_order -fileset sources_1
+close_project
+create_project Sub_Ranging_2222222222222222222222222222 {F:/LAB 5/Sub_Ranging_2222222222222222222222222222} -part xc7a35tcpg236-1
+add_files -norecurse {{F:/LAB 5/Adder.vhd} {F:/LAB 5/LSB_1.vhd} {F:/LAB 5/MSB_1.vhd}}
+add_files -fileset constrs_1 -norecurse {{F:/LAB 5/Subranging.xdc}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

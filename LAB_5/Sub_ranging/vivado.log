@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Nov 27 12:08:04 2017
+# Process ID: 3140
+# Current directory: F:/LAB 5/Sub_ranging
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5856 F:\LAB 5\Sub_ranging\Sub_ranging.xpr
+# Log file: F:/LAB 5/Sub_ranging/vivado.log
+# Journal file: F:/LAB 5/Sub_ranging\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {F:/LAB 5/Sub_ranging/Sub_ranging.xpr}
+CRITICAL WARNING: [Project 1-19] Could not find the file '//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/Adder.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/Clock_divider_50hz.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/LSB_1.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/MSB_1.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/SUB_RANGING_TOP_MODULE.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '//uc.ucalgary.ca/dfs/SSE/Users/arden.oh/Documents/453/Lab 5/Subranging.xdc'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:25 . Memory (MB): peak = 752.230 ; gain = 62.965
+update_compile_order -fileset sources_1
+close_project
+create_project Sub_Ranging_2222222222222222222222222222 {F:/LAB 5/Sub_Ranging_2222222222222222222222222222} -part xc7a35tcpg236-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:22 . Memory (MB): peak = 782.379 ; gain = 26.148
+add_files -norecurse {{F:/LAB 5/Adder.vhd} {F:/LAB 5/LSB_1.vhd} {F:/LAB 5/MSB_1.vhd}}
+add_files -fileset constrs_1 -norecurse {{F:/LAB 5/Subranging.xdc}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 27 12:17:33 2017...
