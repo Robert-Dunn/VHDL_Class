@@ -10,6 +10,8 @@ entity SUB_RANGING_TOP_MODULE is
 			TOP_8: in STD_LOGIC_VECTOR(7 downto 0);
 			BOTTOM_8: in STD_LOGIC_VECTOR(7 downto 0);
 			MSB_out: out STD_LOGIC_VECTOR(2 downto 0);
+			LSB_LEDS: out STD_LOGIC_VECTOR(2 downto 0);
+			MSB_LEDS: out STD_LOGIC_VECTOR(2 downto 0);
 			ADDER_OUTPUT: out STD_LOGIC_VECTOR(5 downto 0)
 	);
 end entity;
@@ -66,6 +68,7 @@ signal CLK_50hz : STD_LOGIC;
 signal Adder_LEDS: STD_LOGIC_VECTOR(5 downto 0);
 
 
+
 begin
 CLOCK_DIV :clock_divider
 	Port Map 
@@ -105,7 +108,8 @@ ADDER_I: Adder
 			LSB => LSB,
 			Six_Bits => Adder_LEDS
 			);
-			
+LSB_LEDS<= LSB;
+MSB_LEDS<= MSB;		
 ADDER_OUTPUT <= Adder_LEDS;
 
 end Behavioural;
