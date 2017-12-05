@@ -357,3 +357,4 @@
 [1127/194807:WARNING:dns_config_service_win.cc(665)] Failed to read DnsConfig.
 [1127/194807:WARNING:dns_config_service_win.cc(665)] Failed to read DnsConfig.
 [1127/194807:WARNING:dns_config_service_win.cc(665)] Failed to read DnsConfig.
+[1204/230949:ERROR:browser_gpu_channel_host_factory.cc(119)] Failed to launch GPU process.
